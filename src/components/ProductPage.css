@@ -10,3 +10,9 @@
         /* Add other styles for smaller screens if needed */
     }
 }
+
+.custom-number-input {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+  }

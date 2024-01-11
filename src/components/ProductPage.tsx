@@ -70,6 +70,12 @@ const ProductPage = () => {
                         <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">XXL</button>
                     </div>
                 </div>
+                <div className="mb-4">
+                    <span className="font-bold text-gray-700 dark:text-gray-300">Quantity:</span>
+                    <div className="flex items-center mt-2">
+                        <input type="number" value={1} className='w-16 border-4 pl-2 rounded-2xl custom-number-input'/>
+                      </div>
+                </div>
                 <div>
                     <span className="font-bold text-gray-700 dark:text-gray-300">Product Description:</span>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">
