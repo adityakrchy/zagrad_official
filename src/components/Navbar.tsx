@@ -33,6 +33,8 @@ const Navbar = () => {
         { title: "Sale", path: "/sale" },
         { title: "About", path: "/about" },
         { title: "Contact", path: "/contact" },
+        // { title: "Login", path: "/login" },
+        // { title: "Cart", path: "/cart" },
     ]
 
     // useEffect(() => {
@@ -86,16 +88,20 @@ const Navbar = () => {
                 </div>
                 <div className={`flex-1 justify-start items-center flex-row-reverse lg:overflow-visible lg:flex lg:pb-0 lg:pr-0 lg:h-auto ${state ? 'h-screen pb-20 overflow-auto pr-4' : 'hidden'} gap-8`}>
                     <div>
-                        <ul className="flex flex-col-reverse items-center justify-center space-x-0  lg:flex-row ">
+                        <ul className="flex flex-col-reverse items-center gap-2 justify-center space-x-0  lg:flex-row ">
 
                             <li className="mt-4 lg:mt-0 flex ">
-                                <Image src={"/profile.svg"} width={24} height={24} alt='PRofile' />
+                                <Image className='cursor-pointer  text-gray-600 hover:text-indigo-600' src={"/profile.svg"} width={24} height={24} alt='PRofile' />
                                 <a href="/login" className="py-3 px-1 font-semibold text-center border text-gray-600 hover:text-indigo-600 rounded-md block lg:inline lg:border-0">
                                     Login
                                 </a>
                             </li>
                             <li className="mt-4 lg:mt-0 flex">
-                               <Image src={"/cart.svg"} width={35} height={35} alt='cart' />
+                               {/* <a href="/cart">
+                               <Image className='cursor-pointer' src={"/cart.svg"} width={35} height={35} alt='cart' />
+                               <span className='relative right-[22px] z-10 font-semibold'>1</span>
+                               </a> */}
+                               <Image className='cursor-pointer' src={"/cart.svg"} width={35} height={35} alt='cart' />
                                <span className='relative right-[22px] z-10 font-semibold'>1</span>
                             </li>
                         </ul>

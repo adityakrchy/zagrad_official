@@ -1,0 +1,12 @@
+.productRes {
+    display: flex;
+    /* Add other styles as needed */
+}
+
+/* Media query for screens with a maximum width of 550px */
+@media screen and (max-width: 650px) {
+    .productRes {
+        flex-direction: column;
+        /* Add other styles for smaller screens if needed */
+    }
+}

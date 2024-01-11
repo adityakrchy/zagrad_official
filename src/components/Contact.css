@@ -1,0 +1,7 @@
+@media screen and (max-width: 550px) {
+    .name_email {
+        /* display: flex; */
+        flex-direction: column;
+        gap: 0;
+    }
+}
