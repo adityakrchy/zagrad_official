@@ -9,8 +9,8 @@ const page = () => {
                     <div className="flex flex-wrap ">
                         <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
                             <div className="relative">
-                                <Image src="/assets/t1.png" width={100} height={100} alt=""
-                                    className="relative z-40 object-cover w-full h-96 lg:rounded-tr-[80px] lg:rounded-bl-[80px] rounded" />
+                                <Image src="/assets/t3.png" width={400} height={400} alt=""
+                                    className="aspect-auto relative z-40 object-cover w-full h-96 lg:rounded-tr-[80px] lg:rounded-bl-[80px] rounded" />
                                 <div
                                     className="absolute z-10 hidden w-full h-full bg-blue-400 rounded-bl-[80px] rounded -bottom-6 right-6 lg:block">
                                 </div>
@@ -57,7 +57,7 @@ const page = () => {
                     <div className="flex flex-row-reverse flex-wrap ">
                         <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
                             <div className="relative">
-                                <Image src="/assets/t1.png" width={100} height={100} alt=""
+                                <Image src="/assets/t1.png" width={400} height={400} alt=""
                                     className="relative z-40 object-cover w-full h-96 lg:rounded-tr-[80px] lg:rounded-bl-[80px] rounded" />
                                 <div
                                     className="absolute z-10 hidden w-full h-full bg-blue-400 rounded-bl-[80px] rounded -bottom-6 right-6 lg:block">
