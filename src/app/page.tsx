@@ -12,7 +12,7 @@ export default function Home() {
      <h2 className='text-xl font-bold text-gray-900 sm:text-3xl'>T Shirt Styles</h2>
      </div>
       <div className='grid grid-cols-4 gap-4 px-4'>
-        <ProductCard />
+        <ProductCard  />
         <ProductCard />
         <ProductCard />
         <ProductCard />

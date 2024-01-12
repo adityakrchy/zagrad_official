@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="mx-auto px-4 pb-6 pt-16 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex justify-center text-teal-600 sm:justify-start">
-            <Image src={"/logo_svg_border.svg"} width={300} height={120} alt='logo' />
+            <Image src={"/zagard_svg.svg"} width={300} height={120} alt='logo' />
           </div>
 
           <p className="mt-4 max-w-2xl font-medium text-center leading-relaxed text-gray-500 sm:text-left lg:mt-0">

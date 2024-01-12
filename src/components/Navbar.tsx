@@ -2,6 +2,10 @@
 
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
+import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet'
+import Link from 'next/link'
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from './ui/select'
+import { ScrollArea } from './ui/scroll-area'
 // import LOGO_SVG from "/logo_svg.svg"
 
 
@@ -24,6 +28,8 @@ const Navbar = () => {
 
     const [state, setState] = useState(false)
     const navRef = useRef()
+
+    const [quantity, setQuantity] = useState<number>(1);
 
     // Replace javascript:void(0) path with your path
     const navigation = [
@@ -57,12 +63,12 @@ const Navbar = () => {
 
 
     return (
-        <nav ref={navRef} className="bg-white w-full top-0 z-20 sticky">
+        <nav className="bg-white w-full top-0 z-20 sticky">
             <div className="items-center px-4  mx-auto md:px-8 lg:flex">
                 <div className="flex items-center justify-between py-3 lg:py-4 lg:block">
                     <a href="/">
                         <Image
-                            src="/logo_svg_border.svg"
+                            src="/zagard_svg.svg"
                             width={150}
                             height={50}
                             alt="Brand Logo"
@@ -97,12 +103,421 @@ const Navbar = () => {
                                 </a>
                             </li>
                             <li className="mt-4 lg:mt-0 flex">
-                               {/* <a href="/cart">
+                                {/* <a href="/cart">
                                <Image className='cursor-pointer' src={"/cart.svg"} width={35} height={35} alt='cart' />
                                <span className='relative right-[22px] z-10 font-semibold'>1</span>
                                </a> */}
-                               <Image className='cursor-pointer' src={"/cart.svg"} width={35} height={35} alt='cart' />
-                               <span className='relative right-[22px] z-10 font-semibold'>1</span>
+                                {/* sheet */}
+                                <div>
+                                    <Sheet>
+                                        <SheetTrigger className='flex w-16'>
+                                            <Image className='cursor-pointer' src={"/cart.svg"} width={35} height={35} alt='cart' />
+                                            <span className='relative right-[22px] z-10 font-semibold'>1</span>
+
+                                        </SheetTrigger>
+                                        <SheetContent className='h-screen flex flex-col items-end justify-between'>
+                                            <SheetHeader>
+                                                <SheetTitle>Shopping Cart</SheetTitle>
+                                                <SheetDescription>
+                                                    <div className="mt-8">
+                                                        <div className="flow-root">
+                                                            <ScrollArea className="w-full h-[550px]">
+                                                                <ul role="list" className="-my-6 divide-y divide-gray-200">
+                                                                    <li className="flex py-6">
+                                                                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
+                                                                        </div>
+
+                                                                        <div className="ml-4 flex flex-1 flex-col">
+                                                                            <div>
+                                                                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                                                                    <h3>
+                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                    </h3>
+                                                                                    <p className="ml-4">$90.00</p>
+                                                                                </div>
+                                                                                <p className="mt-1 text-sm text-gray-500">Salmon</p>
+                                                                            </div>
+                                                                            <div className="flex flex-1 items-end justify-between text-sm">
+                                                                                <div className='flex gap-2 justify-center items-center'>
+
+                                                                                    <Select>
+                                                                                        <SelectTrigger className="w-30">
+                                                                                            <SelectValue placeholder="Quantity" />
+                                                                                        </SelectTrigger>
+                                                                                        <SelectContent>
+                                                                                            <SelectGroup>
+                                                                                                <SelectItem value="1">1</SelectItem>
+                                                                                                <SelectItem value="2">2</SelectItem>
+                                                                                                <SelectItem value="3">3</SelectItem>
+                                                                                                <SelectItem value="4">4</SelectItem>
+                                                                                                <SelectItem value="5">5</SelectItem>
+                                                                                                <SelectItem value="6">6</SelectItem>
+                                                                                                <SelectItem value="7">7</SelectItem>
+                                                                                                <SelectItem value="8">8</SelectItem>
+                                                                                                <SelectItem value="9">9</SelectItem>
+                                                                                                <SelectItem value="10">10</SelectItem>
+
+                                                                                            </SelectGroup>
+                                                                                        </SelectContent>
+                                                                                    </Select>
+                                                                                </div>
+
+                                                                                <div className="flex">
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li className="flex py-6">
+                                                                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
+                                                                        </div>
+
+                                                                        <div className="ml-4 flex flex-1 flex-col">
+                                                                            <div>
+                                                                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                                                                    <h3>
+                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                    </h3>
+                                                                                    <p className="ml-4">$90.00</p>
+                                                                                </div>
+                                                                                <p className="mt-1 text-sm text-gray-500">Salmon</p>
+                                                                            </div>
+                                                                            <div className="flex flex-1 items-end justify-between text-sm">
+                                                                                <div className='flex gap-2 justify-center items-center'>
+
+                                                                                    <Select>
+                                                                                        <SelectTrigger className="w-30">
+                                                                                            <SelectValue placeholder="Quantity" />
+                                                                                        </SelectTrigger>
+                                                                                        <SelectContent>
+                                                                                            <SelectGroup>
+                                                                                                <SelectItem value="1">1</SelectItem>
+                                                                                                <SelectItem value="2">2</SelectItem>
+                                                                                                <SelectItem value="3">3</SelectItem>
+                                                                                                <SelectItem value="4">4</SelectItem>
+                                                                                                <SelectItem value="5">5</SelectItem>
+                                                                                                <SelectItem value="6">6</SelectItem>
+                                                                                                <SelectItem value="7">7</SelectItem>
+                                                                                                <SelectItem value="8">8</SelectItem>
+                                                                                                <SelectItem value="9">9</SelectItem>
+                                                                                                <SelectItem value="10">10</SelectItem>
+
+                                                                                            </SelectGroup>
+                                                                                        </SelectContent>
+                                                                                    </Select>
+                                                                                </div>
+
+                                                                                <div className="flex">
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li className="flex py-6">
+                                                                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
+                                                                        </div>
+
+                                                                        <div className="ml-4 flex flex-1 flex-col">
+                                                                            <div>
+                                                                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                                                                    <h3>
+                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                    </h3>
+                                                                                    <p className="ml-4">$90.00</p>
+                                                                                </div>
+                                                                                <p className="mt-1 text-sm text-gray-500">Salmon</p>
+                                                                            </div>
+                                                                            <div className="flex flex-1 items-end justify-between text-sm">
+                                                                                <div className='flex gap-2 justify-center items-center'>
+
+                                                                                    <Select>
+                                                                                        <SelectTrigger className="w-30">
+                                                                                            <SelectValue placeholder="Quantity" />
+                                                                                        </SelectTrigger>
+                                                                                        <SelectContent>
+                                                                                            <SelectGroup>
+                                                                                                <SelectItem value="1">1</SelectItem>
+                                                                                                <SelectItem value="2">2</SelectItem>
+                                                                                                <SelectItem value="3">3</SelectItem>
+                                                                                                <SelectItem value="4">4</SelectItem>
+                                                                                                <SelectItem value="5">5</SelectItem>
+                                                                                                <SelectItem value="6">6</SelectItem>
+                                                                                                <SelectItem value="7">7</SelectItem>
+                                                                                                <SelectItem value="8">8</SelectItem>
+                                                                                                <SelectItem value="9">9</SelectItem>
+                                                                                                <SelectItem value="10">10</SelectItem>
+
+                                                                                            </SelectGroup>
+                                                                                        </SelectContent>
+                                                                                    </Select>
+                                                                                </div>
+
+                                                                                <div className="flex">
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li className="flex py-6">
+                                                                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
+                                                                        </div>
+
+                                                                        <div className="ml-4 flex flex-1 flex-col">
+                                                                            <div>
+                                                                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                                                                    <h3>
+                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                    </h3>
+                                                                                    <p className="ml-4">$90.00</p>
+                                                                                </div>
+                                                                                <p className="mt-1 text-sm text-gray-500">Salmon</p>
+                                                                            </div>
+                                                                            <div className="flex flex-1 items-end justify-between text-sm">
+                                                                                <div className='flex gap-2 justify-center items-center'>
+
+                                                                                    <Select>
+                                                                                        <SelectTrigger className="w-30">
+                                                                                            <SelectValue placeholder="Quantity" />
+                                                                                        </SelectTrigger>
+                                                                                        <SelectContent>
+                                                                                            <SelectGroup>
+                                                                                                <SelectItem value="1">1</SelectItem>
+                                                                                                <SelectItem value="2">2</SelectItem>
+                                                                                                <SelectItem value="3">3</SelectItem>
+                                                                                                <SelectItem value="4">4</SelectItem>
+                                                                                                <SelectItem value="5">5</SelectItem>
+                                                                                                <SelectItem value="6">6</SelectItem>
+                                                                                                <SelectItem value="7">7</SelectItem>
+                                                                                                <SelectItem value="8">8</SelectItem>
+                                                                                                <SelectItem value="9">9</SelectItem>
+                                                                                                <SelectItem value="10">10</SelectItem>
+
+                                                                                            </SelectGroup>
+                                                                                        </SelectContent>
+                                                                                    </Select>
+                                                                                </div>
+
+                                                                                <div className="flex">
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li className="flex py-6">
+                                                                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
+                                                                        </div>
+
+                                                                        <div className="ml-4 flex flex-1 flex-col">
+                                                                            <div>
+                                                                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                                                                    <h3>
+                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                    </h3>
+                                                                                    <p className="ml-4">$90.00</p>
+                                                                                </div>
+                                                                                <p className="mt-1 text-sm text-gray-500">Salmon</p>
+                                                                            </div>
+                                                                            <div className="flex flex-1 items-end justify-between text-sm">
+                                                                                <div className='flex gap-2 justify-center items-center'>
+
+                                                                                    <Select>
+                                                                                        <SelectTrigger className="w-30">
+                                                                                            <SelectValue placeholder="Quantity" />
+                                                                                        </SelectTrigger>
+                                                                                        <SelectContent>
+                                                                                            <SelectGroup>
+                                                                                                <SelectItem value="1">1</SelectItem>
+                                                                                                <SelectItem value="2">2</SelectItem>
+                                                                                                <SelectItem value="3">3</SelectItem>
+                                                                                                <SelectItem value="4">4</SelectItem>
+                                                                                                <SelectItem value="5">5</SelectItem>
+                                                                                                <SelectItem value="6">6</SelectItem>
+                                                                                                <SelectItem value="7">7</SelectItem>
+                                                                                                <SelectItem value="8">8</SelectItem>
+                                                                                                <SelectItem value="9">9</SelectItem>
+                                                                                                <SelectItem value="10">10</SelectItem>
+
+                                                                                            </SelectGroup>
+                                                                                        </SelectContent>
+                                                                                    </Select>
+                                                                                </div>
+
+                                                                                <div className="flex">
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li className="flex py-6">
+                                                                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
+                                                                        </div>
+
+                                                                        <div className="ml-4 flex flex-1 flex-col">
+                                                                            <div>
+                                                                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                                                                    <h3>
+                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                    </h3>
+                                                                                    <p className="ml-4">$90.00</p>
+                                                                                </div>
+                                                                                <p className="mt-1 text-sm text-gray-500">Salmon</p>
+                                                                            </div>
+                                                                            <div className="flex flex-1 items-end justify-between text-sm">
+                                                                                <div className='flex gap-2 justify-center items-center'>
+
+                                                                                    <Select>
+                                                                                        <SelectTrigger className="w-30">
+                                                                                            <SelectValue placeholder="Quantity" />
+                                                                                        </SelectTrigger>
+                                                                                        <SelectContent>
+                                                                                            <SelectGroup>
+                                                                                                <SelectItem value="1">1</SelectItem>
+                                                                                                <SelectItem value="2">2</SelectItem>
+                                                                                                <SelectItem value="3">3</SelectItem>
+                                                                                                <SelectItem value="4">4</SelectItem>
+                                                                                                <SelectItem value="5">5</SelectItem>
+                                                                                                <SelectItem value="6">6</SelectItem>
+                                                                                                <SelectItem value="7">7</SelectItem>
+                                                                                                <SelectItem value="8">8</SelectItem>
+                                                                                                <SelectItem value="9">9</SelectItem>
+                                                                                                <SelectItem value="10">10</SelectItem>
+
+                                                                                            </SelectGroup>
+                                                                                        </SelectContent>
+                                                                                    </Select>
+                                                                                </div>
+
+                                                                                <div className="flex">
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li className="flex py-6">
+                                                                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
+                                                                        </div>
+
+                                                                        <div className="ml-4 flex flex-1 flex-col">
+                                                                            <div>
+                                                                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                                                                    <h3>
+                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                    </h3>
+                                                                                    <p className="ml-4">$90.00</p>
+                                                                                </div>
+                                                                                <p className="mt-1 text-sm text-gray-500">Salmon</p>
+                                                                            </div>
+                                                                            <div className="flex flex-1 items-end justify-between text-sm">
+                                                                                <div className='flex gap-2 justify-center items-center'>
+
+                                                                                    <Select>
+                                                                                        <SelectTrigger className="w-30">
+                                                                                            <SelectValue placeholder="Quantity" />
+                                                                                        </SelectTrigger>
+                                                                                        <SelectContent>
+                                                                                            <SelectGroup>
+                                                                                                <SelectItem value="1">1</SelectItem>
+                                                                                                <SelectItem value="2">2</SelectItem>
+                                                                                                <SelectItem value="3">3</SelectItem>
+                                                                                                <SelectItem value="4">4</SelectItem>
+                                                                                                <SelectItem value="5">5</SelectItem>
+                                                                                                <SelectItem value="6">6</SelectItem>
+                                                                                                <SelectItem value="7">7</SelectItem>
+                                                                                                <SelectItem value="8">8</SelectItem>
+                                                                                                <SelectItem value="9">9</SelectItem>
+                                                                                                <SelectItem value="10">10</SelectItem>
+
+                                                                                            </SelectGroup>
+                                                                                        </SelectContent>
+                                                                                    </Select>
+                                                                                </div>
+
+                                                                                <div className="flex">
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li className="flex py-6">
+                                                                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
+                                                                        </div>
+
+                                                                        <div className="ml-4 flex flex-1 flex-col">
+                                                                            <div>
+                                                                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                                                                    <h3>
+                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                    </h3>
+                                                                                    <p className="ml-4">$90.00</p>
+                                                                                </div>
+                                                                                <p className="mt-1 text-sm text-gray-500">Salmon</p>
+                                                                            </div>
+                                                                            <div className="flex flex-1 items-end justify-between text-sm">
+                                                                                <div className='flex gap-2 justify-center items-center'>
+
+                                                                                    <Select>
+                                                                                        <SelectTrigger className="w-30">
+                                                                                            <SelectValue placeholder="Quantity" />
+                                                                                        </SelectTrigger>
+                                                                                        <SelectContent>
+                                                                                            <SelectGroup>
+                                                                                                <SelectItem value="1">1</SelectItem>
+                                                                                                <SelectItem value="2">2</SelectItem>
+                                                                                                <SelectItem value="3">3</SelectItem>
+                                                                                                <SelectItem value="4">4</SelectItem>
+                                                                                                <SelectItem value="5">5</SelectItem>
+                                                                                                <SelectItem value="6">6</SelectItem>
+                                                                                                <SelectItem value="7">7</SelectItem>
+                                                                                                <SelectItem value="8">8</SelectItem>
+                                                                                                <SelectItem value="9">9</SelectItem>
+                                                                                                <SelectItem value="10">10</SelectItem>
+
+                                                                                            </SelectGroup>
+                                                                                        </SelectContent>
+                                                                                    </Select>
+                                                                                </div>
+
+                                                                                <div className="flex">
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+
+
+                                                                </ul>
+                                                            </ScrollArea>
+                                                        </div>
+                                                    </div>
+
+                                                </SheetDescription>
+                                            </SheetHeader>
+                                            <SheetFooter className=' w-full'>
+                                                <div className=''>
+                                                    <p>Subtotal</p>
+                                                    <span>{"₹100"}</span>
+                                                </div>
+                                                <div>
+                                                    <p>Shipping and taxes calculated at checkout.</p>
+                                                </div>
+                                                <button className='bg-orange-600 px-6 py-4 text-white font-semibold rounded w-full'>Checkout</button>
+                                                <div>
+                                                    <p>or <Link href={"#"}>continue shopping</Link></p>
+                                                </div>
+                                            </SheetFooter>
+                                        </SheetContent>
+
+                                    </Sheet>
+
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -137,7 +552,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav >
     )
 }
 

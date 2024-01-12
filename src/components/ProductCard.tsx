@@ -3,7 +3,7 @@ import React from 'react'
 
 const ProductCard = () => {
     return (
-        <a href="#" className="group relative block">
+        <a href="/productpage" className="group relative block">
             <div className="relative h-[350px] sm:h-[450px]">
                 <Image
                     src="/assets/t1.png"

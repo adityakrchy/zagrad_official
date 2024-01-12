@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const ImageCollection = () => {
@@ -32,7 +33,7 @@ const ImageCollection = () => {
                     <div className="lg:col-span-2 lg:py-8">
                         <ul className="grid grid-cols-2 gap-4">
                             <li>
-                                <a href="#" className="group block">
+                                <Link href="/productpage" className="group block">
                                     <Image
                                         src="/assets/t1.png"
                                         alt=""
@@ -50,11 +51,11 @@ const ImageCollection = () => {
 
                                         <p className="mt-1 text-sm text-gray-700">$150</p>
                                     </div>
-                                </a>
+                                </Link>
                             </li>
 
                             <li>
-                                <a href="#" className="group block">
+                                <Link href="/productpage" className="group block">
                                     <Image
                                         src="/assets/t2.png"
                                         alt=""
@@ -72,7 +73,7 @@ const ImageCollection = () => {
 
                                         <p className="mt-1 text-sm text-gray-700">$150</p>
                                     </div>
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

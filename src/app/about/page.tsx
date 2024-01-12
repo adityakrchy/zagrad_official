@@ -28,18 +28,18 @@ const page = () => {
                         <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 ">
                             <div className="relative">
                                 <h1
-                                    className="absolute -top-20   left-0 text-[20px] lg:text-[100px] text-gray-900 font-bold  dark:text-gray-200 opacity-5 md:block hidden">
+                                    className="absolute -top-20   left-0 text-[20px] lg:text-[100px] text-gray-900 font-bold  opacity-5 md:block hidden">
                                     About Us
                                 </h1>
-                                <h1 className="pl-2 text-3xl font-bold border-l-8 border-blue-400 md:text-5xl dark:text-white">
+                                <h1 className="pl-2 text-3xl font-bold border-l-8 border-blue-400 md:text-5xl ">
                                     Welcome to our site
                                 </h1>
                             </div>
-                            <p className="mt-6 mb-10 text-base leading-7 text-gray-500 dark:text-gray-400">
-                                <h1>Welcome to Zagrad: Elevating Style, Embracing Comfort</h1> <br />
+                            <p className="mt-6 mb-10 text-base leading-7 text-gray-500 ">
+                                Welcome to Zagrad: Elevating Style, Embracing Comfort <br />
 
-                                At Zagrad, we believe that fashion is more than just clothing – it's a reflection of individuality, comfort, and confidence. Established with a passion for redefining casual wear, Zagrad is your go-to destination for contemporary and comfortable T-shirts that effortlessly blend style with ease.
-                                <br/>
+                                At Zagrad, we believe that fashion is more than just clothing – it&apos;s a reflection of individuality, comfort, and confidence. Established with a passion for redefining casual wear, Zagrad is your go-to destination for contemporary and comfortable T-shirts that effortlessly blend style with ease.
+                                <br />
 
                             </p>
                             <a href="#"
@@ -76,18 +76,18 @@ const page = () => {
                         <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 ">
                             <div className="relative">
                                 <h1
-                                    className="absolute -top-20   left-0 text-[20px] lg:text-[100px] text-gray-900 font-bold  dark:text-gray-200 opacity-5 md:block hidden">
+                                    className="absolute -top-20   left-0 text-[20px] lg:text-[100px] text-gray-900 font-bold  opacity-5 md:block hidden">
                                     About Us
                                 </h1>
-                                <h1 className="pl-2 text-3xl font-bold border-l-8 border-blue-400 md:text-5xl dark:text-white">
+                                <h1 className="pl-2 text-3xl font-bold border-l-8 border-blue-400 md:text-5xl ">
                                     Welcome to our site
                                 </h1>
                             </div>
-                            <p className="mt-6 mb-10 text-base leading-7 text-gray-500 dark:text-gray-400">
-                                <h1>Welcome to Zagrad: Elevating Style, Embracing Comfort</h1> <br />
+                            <p className="mt-6 mb-10 text-base leading-7 text-gray-500 ">
+                                Welcome to Zagrad: Elevating Style, Embracing Comfort <br />
 
-                                At Zagrad, we believe that fashion is more than just clothing – it's a reflection of individuality, comfort, and confidence. Established with a passion for redefining casual wear, Zagrad is your go-to destination for contemporary and comfortable T-shirts that effortlessly blend style with ease.
-                                <br/>
+                                At Zagrad, we believe that fashion is more than just clothing – it&apos;s a reflection of individuality, comfort, and confidence. Established with a passion for redefining casual wear, Zagrad is your go-to destination for contemporary and comfortable T-shirts that effortlessly blend style with ease.
+                                <br />
 
                             </p>
                             <a href="#"
