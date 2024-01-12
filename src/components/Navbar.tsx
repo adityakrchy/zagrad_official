@@ -500,7 +500,7 @@ const Navbar = () => {
 
                                                 </SheetDescription>
                                             </SheetHeader>
-                                            <SheetFooter className=' w-full'>
+                                            <SheetFooter className='flex flex-col w-full'>
                                                 <div className=''>
                                                     <p>Subtotal</p>
                                                     <span>{"₹100"}</span>
