@@ -11,7 +11,7 @@ const Women = () => {
                     alt=""
                     width={450}
                     height={350}
-                    className="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
+                    className="rounded absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
                 />
 
                 <Image
@@ -19,7 +19,7 @@ const Women = () => {
                     alt=""
                     width={450}
                     height={350}
-                    className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
+                    className="rounded absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
                 />
             </div>
 
