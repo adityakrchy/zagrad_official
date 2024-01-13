@@ -5,6 +5,8 @@ import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import "@/components/ProductPage.css"
 import Link from 'next/link'
+import NewReview from './review/NewReview'
+import Reviews from './review/Review'
 
 type ProductPageProps = {
     title: String,
@@ -293,6 +295,15 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                 </section>
             </div>
 
+            <NewReview />
+            <hr />
+
+            <div className="font-semibold">
+                <h1 className="text-gray-500 review-title mb-6 mt-10 text-2xl">
+                    Other Customers Reviews
+                </h1>
+                <Reviews />
+            </div>
         </>
     )
 }
