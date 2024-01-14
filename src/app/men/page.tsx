@@ -1,4 +1,4 @@
-import Men from '@/categories/Men'
+import Men from '@/components/categories/Men'
 import React from 'react'
 
 const page = () => {
