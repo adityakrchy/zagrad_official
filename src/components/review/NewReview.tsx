@@ -29,7 +29,7 @@ const NewReview = () => {
         ></textarea>
       </div>
 
-      <button className="mt-3 mb-5 px-4 py-2 text-center inline-block text-white bg-yellow-500 border border-transparent rounded-md hover:bg-yellow-600 w-1/3">
+      <button className="mt-3 mb-5 px-4 py-2 text-center inline-block text-white bg-indigo-500 border border-transparent rounded-md hover:bg-yellow-600 w-1/3">
         Post Review
       </button>
     </div>
