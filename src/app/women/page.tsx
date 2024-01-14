@@ -1,4 +1,4 @@
-import Women from '@/categories/Women'
+import Women from '@/components/categories/Women'
 import React from 'react'
 
 const page = () => {

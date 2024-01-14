@@ -1,5 +1,5 @@
-import Men from '@/categories/Men'
-import Women from '@/categories/Women'
+import Men from '@/components/categories/Men'
+import Women from '@/components/categories/Women'
 import React from 'react'
 
 const page = () => {
