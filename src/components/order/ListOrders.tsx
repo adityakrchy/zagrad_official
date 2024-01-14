@@ -1,6 +1,7 @@
 import React from "react";
-import OrderItem from "./OrderItem";
-import Sidebar from "../layout/Sidebar";
+import OrderItem from "@/components/order/OrderItem";
+// import Sidebar from "../layout/Sidebar";
+import Sidebar from "@/components/layout/Sidebar"
 
 const ListOrders = () => {
   return (

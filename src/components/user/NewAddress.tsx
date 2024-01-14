@@ -1,6 +1,6 @@
 import React from "react";
-
-import Sidebar from "../layout/Sidebar";
+// import Sidebar from "../layout/Sidebar";
+import Sidebar from "@/components/layout/Sidebar"
 
 import { countries } from "countries-list";
 

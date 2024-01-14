@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import UserAddresses from "../user/UserAddresses";
-import Sidebar from "../layout/Sidebar";
+// import UserAddresses from "../user/UserAddresses";
+import UserAddresses from "@/components/user/UserAddresses"
+// import Sidebar from "../layout/Sidebar";
+import Sidebar from "@/components/layout/Sidebar"
 
 const Profile = () => {
   return (
