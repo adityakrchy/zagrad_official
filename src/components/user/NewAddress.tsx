@@ -4,6 +4,37 @@ import Sidebar from "@/components/layout/Sidebar"
 
 import { countries } from "countries-list";
 
+const indianStates = [
+  'Andhra Pradesh',
+  'Arunachal Pradesh',
+  'Assam',
+  'Bihar',
+  'Chhattisgarh',
+  'Goa',
+  'Gujarat',
+  'Haryana',
+  'Himachal Pradesh',
+  'Jharkhand',
+  'Karnataka',
+  'Kerala',
+  'Madhya Pradesh',
+  'Maharashtra',
+  'Manipur',
+  'Meghalaya',
+  'Mizoram',
+  'Nagaland',
+  'Odisha',
+  'Punjab',
+  'Rajasthan',
+  'Sikkim',
+  'Tamil Nadu',
+  'Telangana',
+  'Tripura',
+  'Uttar Pradesh',
+  'Uttarakhand',
+  'West Bengal',
+];
+
 const NewAddress = () => {
   const countriesList = Object.values(countries);
 
@@ -29,6 +60,16 @@ const NewAddress = () => {
                       className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full"
                       type="text"
                       placeholder="Type your address"
+                      required
+                    />
+                  </div>
+                  <div className="mb-4 md:col-span-2">
+                    <label className="block mb-1"> Email* </label>
+                    <input
+                      className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full"
+                      type="email"
+                      placeholder="Type your Email"
+                      required
                     />
                   </div>
 
@@ -39,16 +80,37 @@ const NewAddress = () => {
                         className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full"
                         type="text"
                         placeholder="Type your city"
+                        required
                       />
                     </div>
 
-                    <div className="mb-4 md:col-span-1">
+                    {/* <div className="mb-4 md:col-span-1">
                       <label className="block mb-1"> State </label>
                       <input
                         className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full"
                         type="text"
                         placeholder="Type state here"
+                        required
                       />
+                    </div> */}
+                    <div className="mb-4 md:col-span-1">
+                      <label className="block mb-1">State</label>
+                      <select
+                        className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full"
+                        required
+                      >
+                        {/* Default/placeholder option */}
+                        <option value="" disabled selected>
+                          Select a State
+                        </option>
+
+                        {/* Options for Indian states */}
+                        {indianStates.map((state) => (
+                          <option key={state} value={state}>
+                            {state}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </div>
 
@@ -59,6 +121,7 @@ const NewAddress = () => {
                         className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full"
                         type="number"
                         placeholder="Type zip code here"
+                        required
                       />
                     </div>
 
@@ -68,11 +131,12 @@ const NewAddress = () => {
                         className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full"
                         type="number"
                         placeholder="Type phone no here"
+                        required
                       />
                     </div>
                   </div>
 
-                  <div className="mb-4 md:col-span-2">
+                  {/* <div className="mb-4 md:col-span-2">
                     <label className="block mb-1"> Country </label>
                     <select className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full">
                       {countriesList.map((country) => (
@@ -81,7 +145,24 @@ const NewAddress = () => {
                         </option>
                       ))}
                     </select>
+                  </div> */}
+                  <div className="mb-4 md:col-span-2">
+                    <label className="block mb-1">Country</label>
+                    <select className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full" required>
+                      {/* Default/placeholder option */}
+                      <option value="" disabled selected>
+                        Select a Country
+                      </option>
+
+                      {/* Options from the countriesList */}
+                      {countriesList.map((country) => (
+                        <option key={country.name} value={country.name}>
+                          {country.name}
+                        </option>
+                      ))}
+                    </select>
                   </div>
+
 
                   <button
                     type="submit"
