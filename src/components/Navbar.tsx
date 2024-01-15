@@ -98,7 +98,10 @@ const Navbar = () => {
 
                             <li className="mt-4 lg:mt-0 flex ">
                                 <Image className='cursor-pointer  text-gray-600 hover:text-indigo-600' src={"/profile.svg"} width={24} height={24} alt='PRofile' />
-                                <Link href="/profile" className="py-3 px-1 font-semibold text-center border text-gray-600 hover:text-indigo-600 rounded-md block lg:inline lg:border-0">
+                                {/* <Link href="/profile" className="py-3 px-1 font-semibold text-center border text-gray-600 hover:text-indigo-600 rounded-md block lg:inline lg:border-0">
+                                    Login
+                                </Link> */}
+                                <Link href="/loginEmail" className="py-3 px-1 font-semibold text-center border text-gray-600 hover:text-indigo-600 rounded-md block lg:inline lg:border-0">
                                     Login
                                 </Link>
                             </li>
