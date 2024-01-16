@@ -4,8 +4,6 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-
-
     <footer className="bg-white">
       <div className="mx-auto px-4 pb-6 pt-16 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-center lg:justify-between">
