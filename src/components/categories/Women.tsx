@@ -1,10 +1,11 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Women = () => {
   return (
     <>
-    <a href="#" className="group relative block">
+    <Link href="#" className="group relative block">
             <div className="relative h-[350px] sm:h-[450px]">
                 <Image
                     src="/assets/t1.png"
@@ -37,7 +38,7 @@ const Women = () => {
                     Shop Now
                 </span>
             </div>
-        </a>
+        </Link>
     </>
     
   )

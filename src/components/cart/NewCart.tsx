@@ -1,17 +1,17 @@
 import React from 'react'
 import { ScrollArea } from "@/components/ui/scroll-area"
-import Image from 'next/image'
+import Link from 'next/link'
 
 
 const NewCart = () => {
     return (
         <>
-            <head>
+            {/* <head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Document</title>
 
-            </head>
+            </head> */}
             <div className="container mx-auto mt-10">
                 <div className="flex shadow-md my-10">
                     <div className="w-3/4 bg-white px-10 py-10">
@@ -34,7 +34,7 @@ const NewCart = () => {
                                     <div className="flex flex-col justify-between ml-4 flex-grow">
                                         <span className="font-bold text-sm">Printed T-Shirt</span>
                                         <span className="text-black-200 text-xs">Size <span className='text-red-500'>M</span></span>
-                                        <a href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
+                                        <Link href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</Link>
                                     </div>
                                 </div>
                                 <div className="flex justify-center w-1/5">
@@ -59,7 +59,7 @@ const NewCart = () => {
                                     <div className="flex flex-col justify-between ml-4 flex-grow">
                                         <span className="font-bold text-sm">Printed T-Shirt</span>
                                         <span className="text-black-200 text-xs">Size <span className='text-red-500'>M</span></span>
-                                        <a href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
+                                        <Link href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</Link>
                                     </div>
                                 </div>
                                 <div className="flex justify-center w-1/5">
@@ -84,7 +84,7 @@ const NewCart = () => {
                                     <div className="flex flex-col justify-between ml-4 flex-grow">
                                         <span className="font-bold text-sm">Printed T-Shirt</span>
                                         <span className="text-black-200 text-xs">Size <span className='text-red-500'>M</span></span>
-                                        <a href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
+                                        <Link href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</Link>
                                     </div>
                                 </div>
                                 <div className="flex justify-center w-1/5">
@@ -109,7 +109,7 @@ const NewCart = () => {
                                     <div className="flex flex-col justify-between ml-4 flex-grow">
                                         <span className="font-bold text-sm">Printed T-Shirt</span>
                                         <span className="text-black-200 text-xs">Size <span className='text-red-500'>M</span></span>
-                                        <a href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
+                                        <Link href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</Link>
                                     </div>
                                 </div>
                                 <div className="flex justify-center w-1/5">
@@ -134,7 +134,7 @@ const NewCart = () => {
                                     <div className="flex flex-col justify-between ml-4 flex-grow">
                                         <span className="font-bold text-sm">Printed T-Shirt</span>
                                         <span className="text-black-200 text-xs">Size <span className='text-red-500'>M</span></span>
-                                        <a href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
+                                        <Link href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</Link>
                                     </div>
                                 </div>
                                 <div className="flex justify-center w-1/5">
@@ -151,11 +151,11 @@ const NewCart = () => {
                             </div>
                         </ScrollArea>
 
-                        <a href="#" className="flex font-semibold text-indigo-600 text-sm mt-10">
+                        <Link href="#" className="flex font-semibold text-indigo-600 text-sm mt-10">
 
                             <svg className="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" /></svg>
                             Continue Shopping
-                        </a>
+                        </Link>
                     </div>
 
                     <div id="summary" className="bg-[#f6f6f6] w-1/4 px-8 py-10">

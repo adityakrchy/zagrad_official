@@ -147,7 +147,7 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     </li>
 
                                     <li>
-                                        <a href="#" className="group block">
+                                        <Link href="#" className="group block">
                                             <Image
                                                 src="/assets/t2.png"
                                                 alt=""
@@ -165,11 +165,11 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
 
                                                 <p className="mt-1 text-sm text-gray-700">$150</p>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="group block">
+                                        <Link href="#" className="group block">
                                             <Image
                                                 src="/assets/t1.png"
                                                 alt=""
@@ -187,11 +187,11 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
 
                                                 <p className="mt-1 text-sm text-gray-700">$150</p>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="group block">
+                                        <Link href="#" className="group block">
                                             <Image
                                                 src="/assets/t2.png"
                                                 alt=""
@@ -209,12 +209,12 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
 
                                                 <p className="mt-1 text-sm text-gray-700">$150</p>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div> */}
 
-                            <a href="#" className="group block">
+                            <Link href="#" className="group block">
                                 <Image
                                     src="/assets/t1.png"
                                     alt=""
@@ -232,8 +232,8 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
 
                                     <p className="mt-1 text-sm text-gray-700">$150</p>
                                 </div>
-                            </a>
-                            <a href="#" className="group block">
+                            </Link>
+                            <Link href="#" className="group block">
                                 <Image
                                     src="/assets/t1.png"
                                     alt=""
@@ -251,8 +251,8 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
 
                                     <p className="mt-1 text-sm text-gray-700">$150</p>
                                 </div>
-                            </a>
-                            <a href="#" className="group block">
+                            </Link>
+                            <Link href="#" className="group block">
                                 <Image
                                     src="/assets/t1.png"
                                     alt=""
@@ -270,8 +270,8 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
 
                                     <p className="mt-1 text-sm text-gray-700">$150</p>
                                 </div>
-                            </a>
-                            <a href="#" className="group block">
+                            </Link>
+                            <Link href="#" className="group block">
                                 <Image
                                     src="/assets/t1.png"
                                     alt=""
@@ -289,7 +289,7 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
 
                                     <p className="mt-1 text-sm text-gray-700">$150</p>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </section>
