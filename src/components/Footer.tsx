@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
 
           <p className="mt-4 max-w-2xl font-medium text-center leading-relaxed text-gray-500 sm:text-left lg:mt-0">
-          Welcome to Zagrad, your go-to destination for top-notch online shopping catering to men, women, and kids in India. Elevate your fashion quotient and redefine your style statement with our trendy and fashionable items. Explore our treasure trove of unique designs and make a bold statement with Zagrad.
+            Welcome to Zagrad, your go-to destination for top-notch online shopping catering to men, women, and kids in India. Elevate your fashion quotient and redefine your style statement with our trendy and fashionable items. Explore our treasure trove of unique designs and make a bold statement with Zagrad.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ const Footer = () => {
           </div>
 
           <div className="text-center sm:text-left md:col-span-4 lg:col-span-2">
-            <p className="text-lg font-medium text-gray-900">Stay in Touch</p>
+            {/* <p className="text-lg font-medium text-gray-900">Stay in Touch</p>
 
             <div className="mx-auto mt-8 max-w-md sm:ms-0">
               <p className="text-center leading-relaxed text-gray-500 ltr:sm:text-left rtl:sm:text-right">
@@ -158,13 +158,24 @@ const Footer = () => {
                   </button>
                 </div>
               </form>
+            </div> */}
+            <div>
+              <div className='flex justify-center items-center'>
+                <Image src={"/original.png"} width={65} height={65} alt='original' />
+                <p className='px-4 text-gray-500'><b className='text-black font-medium'> 100% ORIGINAL </b> guarantee for all products at zagrad</p>
+              </div>
+
+              <div className='pt-6 flex justify-center items-center'>
+                <Image src={"/returnAt.svg"} width={65} height={65} alt='original' />
+                <p className='px-4 text-gray-500'><b className='text-black font-medium'> Return within 7days </b> of receiving your order</p>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="mt-16 border-t border-gray-100 pt-6 sm:flex sm:items-center sm:justify-between">
           <p className="text-center text-sm text-gray-500 sm:text-left">
-            Copyright &copy; 2022. All rights reserved.
+            Copyright &copy; 2024 Zagrad. All rights reserved.
           </p>
 
           <ul className="mt-4 flex justify-center gap-6 sm:mt-0 sm:justify-start">
