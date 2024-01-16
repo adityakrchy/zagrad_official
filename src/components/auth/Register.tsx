@@ -47,13 +47,13 @@ const Register = () => {
                                             <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required />
                                         </div>
                                         <div className="ml-3 text-sm">
-                                            <label htmlFor="terms" className="font-light text-gray-500 dark:text-gray-300">I accept the <a className="font-medium text-[#6A64F1] hover:underline dark:text-primary-500" href="#">Terms and Conditions</a></label>
+                                            <label htmlFor="terms" className="font-light text-gray-500 dark:text-gray-300">I accept the <a className="font-medium text-indigo-500 hover:underline dark:text-primary-500" href="#">Terms and Conditions</a></label>
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" className="w-full text-white bg-[#6A64F1] hover:shadow-form focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create an account</button>
+                                <button type="submit" className="w-full text-white bg-indigo-500 hover:bg-indigo-600 hover:shadow-form focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create an account</button>
                                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                                    Already have an account? <Link href="/loginEmail" className="font-medium text-[#6A64F1] hover:underline dark:text-primary-500">Login here</Link>
+                                    Already have an account? <Link href="/loginEmail" className="font-medium text-indigo-500 hover:underline dark:text-primary-500">Login here</Link>
                                 </p>
                             </form>
                         </div>
