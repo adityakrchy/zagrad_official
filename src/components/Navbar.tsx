@@ -511,13 +511,10 @@ const Navbar = () => {
                                                 <div>
                                                     <p>Shipping and taxes calculated at checkout.</p>
                                                 </div>
-                                                <button className='bg-indigo-500 hover:bg-indigo-600 px-6 py-4 text-white font-semibold rounded w-full'>Checkout</button>
-                                                {/* <Link href={"/cart"} className='bg-orange-600 px-6 py-4 flex justify-center items-center text-white font-semibold rounded w-full'>
+                                                {/* <button className='bg-indigo-500 hover:bg-indigo-600 px-6 py-4 text-white font-semibold rounded w-full'>Checkout</button> */}
+                                                <Link href={"/cart"} className='bg-orange-600 px-6 py-4 flex justify-center items-center text-white font-semibold rounded w-full'>
                                                     Checkout
-                                                </Link>   */}
-                                                {/* <div>
-                                                    <p>or <Link className='text-indigo-600 hover:underline' href={"/cart"}>continue shopping</Link></p>
-                                                </div> */}
+                                                </Link>  
                                             </SheetFooter>
                                         </SheetContent>
 
