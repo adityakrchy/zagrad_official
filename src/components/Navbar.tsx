@@ -503,18 +503,24 @@ const Navbar = () => {
 
                                                 </SheetDescription>
                                             </SheetHeader>
-                                            <SheetFooter className='flex flex-col w-full'>
-                                                <div className=''>
-                                                    <p>Subtotal</p>
-                                                    <span>{"₹100"}</span>
+                                            <SheetFooter className='border-t-2 pt-2  w-full'>
+                                                <div className='flex flex-col gap-4'>
+                                                    <div className="">
+                                                        <div className='flex justify-between text-base font-medium text-gray-900'>
+                                                            <h3>
+                                                                <Link href="#">Subtotal</Link>
+                                                            </h3>
+                                                            <p className="ml-4">$90.00</p>
+                                                        </div>
+                                                        <p>*Shipping and taxes calculated at checkout.</p>
+                                                    </div>
+                                                    <div>
+                                                    </div>
+                                                    {/* <button className='bg-indigo-500 hover:bg-indigo-600 px-6 py-4 text-white font-semibold rounded w-full'>Checkout</button> */}
+                                                    <Link href={"/cart"} className='bg-indigo-500 px-6 py-4 flex justify-center items-center text-white font-semibold rounded w-full'>
+                                                        Checkout
+                                                    </Link>
                                                 </div>
-                                                <div>
-                                                    <p>Shipping and taxes calculated at checkout.</p>
-                                                </div>
-                                                {/* <button className='bg-indigo-500 hover:bg-indigo-600 px-6 py-4 text-white font-semibold rounded w-full'>Checkout</button> */}
-                                                <Link href={"/cart"} className='bg-indigo-500 px-6 py-4 flex justify-center items-center text-white font-semibold rounded w-full'>
-                                                    Checkout
-                                                </Link>  
                                             </SheetFooter>
                                         </SheetContent>
 
