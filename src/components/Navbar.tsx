@@ -63,7 +63,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className="bg-white w-full top-0 z-20 sticky">
+        <nav className="bg-white w-full top-0 z-50 sticky">
             <div className="items-center px-4  mx-auto md:px-8 lg:flex">
                 <div className="flex items-center justify-between py-3 lg:py-4 lg:block">
                     <Link href="/">
@@ -512,7 +512,7 @@ const Navbar = () => {
                                                     <p>Shipping and taxes calculated at checkout.</p>
                                                 </div>
                                                 {/* <button className='bg-indigo-500 hover:bg-indigo-600 px-6 py-4 text-white font-semibold rounded w-full'>Checkout</button> */}
-                                                <Link href={"/cart"} className='bg-orange-600 px-6 py-4 flex justify-center items-center text-white font-semibold rounded w-full'>
+                                                <Link href={"/cart"} className='bg-indigo-500 px-6 py-4 flex justify-center items-center text-white font-semibold rounded w-full'>
                                                     Checkout
                                                 </Link>  
                                             </SheetFooter>
