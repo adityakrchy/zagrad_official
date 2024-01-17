@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import UserAddresses from "../user/UserAddresses";
 import Sidebar from "../layout/Sidebar";
+import Image from "next/image";
 
 const Profile = () => {
   return (
@@ -13,9 +14,11 @@ const Profile = () => {
             <main className="md:w-2/3 lg:w-3/4 px-4">
               <figure className="flex items-start sm:items-center">
                 <div className="relative">
-                  <img
-                    className="w-16 h-16 rounded-full mr-4"
+                  <Image
+                    className=" rounded-full mr-4"
                     src={"/assets/t1.png"}
+                    width={64}
+                    height={64}
                     alt={"user name"}
                   />
                 </div>
@@ -35,9 +38,9 @@ const Profile = () => {
 
               <UserAddresses />
 
-              <Link href="/newAddress">
-                <button className="px-4 py-2 inline-block text-blue-600 border border-gray-300 rounded-md hover:bg-gray-100">
-                  <i className="mr-1 fa fa-plus"></i> Add new address
+              <Link className="bg-indigo-500" href="/newAddress">
+                <button className="px-4 py-2 inline-block ">
+                  <i className="mr-1 fa fa-plus"> Add new address</i>
                 </button>
               </Link>
 
