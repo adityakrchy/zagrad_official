@@ -66,14 +66,14 @@ const Navbar = () => {
         <nav className="bg-white w-full top-0 z-20 sticky">
             <div className="items-center px-4  mx-auto md:px-8 lg:flex">
                 <div className="flex items-center justify-between py-3 lg:py-4 lg:block">
-                    <a href="/">
+                    <Link href="/">
                         <Image
                             src="/zagard_svg.svg"
                             width={150}
                             height={50}
                             alt="Brand Logo"
                         />
-                    </a>
+                    </Link>
                     <div className="lg:hidden">
                         <button className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
                             onClick={() => setState(!state)}
@@ -98,15 +98,18 @@ const Navbar = () => {
 
                             <li className="mt-4 lg:mt-0 flex ">
                                 <Image className='cursor-pointer  text-gray-600 hover:text-indigo-600' src={"/profile.svg"} width={24} height={24} alt='PRofile' />
-                                <Link href="/profile" className="py-3 px-1 font-semibold text-center border text-gray-600 hover:text-indigo-600 rounded-md block lg:inline lg:border-0">
+                                {/* <Link href="/profile" className="py-3 px-1 font-semibold text-center border text-gray-600 hover:text-indigo-600 rounded-md block lg:inline lg:border-0">
+                                    Login
+                                </Link> */}
+                                <Link href="/loginEmail" className="py-3 px-1 font-semibold text-center border text-gray-600 hover:text-indigo-600 rounded-md block lg:inline lg:border-0">
                                     Login
                                 </Link>
                             </li>
                             <li className="mt-4 lg:mt-0 flex">
-                                {/* <a href="/cart">
+                                {/* <Link href="/cart">
                                <Image className='cursor-pointer' src={"/cart.svg"} width={35} height={35} alt='cart' />
                                <span className='relative right-[22px] z-10 font-semibold'>1</span>
-                               </a> */}
+                               </Link> */}
                                 {/* sheet */}
                                 <div>
                                     <Sheet>
@@ -132,7 +135,7 @@ const Navbar = () => {
                                                                             <div>
                                                                                 <div className="flex justify-between text-base font-medium text-gray-900">
                                                                                     <h3>
-                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                        <Link href="#">Throwback Hip Bag</Link>
                                                                                     </h3>
                                                                                     <p className="ml-4">$90.00</p>
                                                                                 </div>
@@ -164,7 +167,7 @@ const Navbar = () => {
                                                                                 </div>
 
                                                                                 <div className="flex">
-                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500 hover:underline">Remove</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -178,7 +181,7 @@ const Navbar = () => {
                                                                             <div>
                                                                                 <div className="flex justify-between text-base font-medium text-gray-900">
                                                                                     <h3>
-                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                        <Link href="#">Throwback Hip Bag</Link>
                                                                                     </h3>
                                                                                     <p className="ml-4">$90.00</p>
                                                                                 </div>
@@ -210,7 +213,7 @@ const Navbar = () => {
                                                                                 </div>
 
                                                                                 <div className="flex">
-                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500 hover:underline">Remove</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -224,7 +227,7 @@ const Navbar = () => {
                                                                             <div>
                                                                                 <div className="flex justify-between text-base font-medium text-gray-900">
                                                                                     <h3>
-                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                        <Link href="#">Throwback Hip Bag</Link>
                                                                                     </h3>
                                                                                     <p className="ml-4">$90.00</p>
                                                                                 </div>
@@ -256,7 +259,7 @@ const Navbar = () => {
                                                                                 </div>
 
                                                                                 <div className="flex">
-                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500 hover:underline">Remove</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -270,7 +273,7 @@ const Navbar = () => {
                                                                             <div>
                                                                                 <div className="flex justify-between text-base font-medium text-gray-900">
                                                                                     <h3>
-                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                        <Link href="#">Throwback Hip Bag</Link>
                                                                                     </h3>
                                                                                     <p className="ml-4">$90.00</p>
                                                                                 </div>
@@ -302,7 +305,7 @@ const Navbar = () => {
                                                                                 </div>
 
                                                                                 <div className="flex">
-                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500 hover:underline">Remove</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -316,7 +319,7 @@ const Navbar = () => {
                                                                             <div>
                                                                                 <div className="flex justify-between text-base font-medium text-gray-900">
                                                                                     <h3>
-                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                        <Link href="#">Throwback Hip Bag</Link>
                                                                                     </h3>
                                                                                     <p className="ml-4">$90.00</p>
                                                                                 </div>
@@ -348,7 +351,7 @@ const Navbar = () => {
                                                                                 </div>
 
                                                                                 <div className="flex">
-                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500 hover:underline">Remove</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -362,7 +365,7 @@ const Navbar = () => {
                                                                             <div>
                                                                                 <div className="flex justify-between text-base font-medium text-gray-900">
                                                                                     <h3>
-                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                        <Link href="#">Throwback Hip Bag</Link>
                                                                                     </h3>
                                                                                     <p className="ml-4">$90.00</p>
                                                                                 </div>
@@ -394,7 +397,7 @@ const Navbar = () => {
                                                                                 </div>
 
                                                                                 <div className="flex">
-                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500 hover:underline">Remove</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -408,7 +411,7 @@ const Navbar = () => {
                                                                             <div>
                                                                                 <div className="flex justify-between text-base font-medium text-gray-900">
                                                                                     <h3>
-                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                        <Link href="#">Throwback Hip Bag</Link>
                                                                                     </h3>
                                                                                     <p className="ml-4">$90.00</p>
                                                                                 </div>
@@ -440,7 +443,7 @@ const Navbar = () => {
                                                                                 </div>
 
                                                                                 <div className="flex">
-                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500 hover:underline">Remove</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -454,7 +457,7 @@ const Navbar = () => {
                                                                             <div>
                                                                                 <div className="flex justify-between text-base font-medium text-gray-900">
                                                                                     <h3>
-                                                                                        <a href="#">Throwback Hip Bag</a>
+                                                                                        <Link href="#">Throwback Hip Bag</Link>
                                                                                     </h3>
                                                                                     <p className="ml-4">$90.00</p>
                                                                                 </div>
@@ -486,7 +489,7 @@ const Navbar = () => {
                                                                                 </div>
 
                                                                                 <div className="flex">
-                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500 hover:underline">Remove</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -508,10 +511,10 @@ const Navbar = () => {
                                                 <div>
                                                     <p>Shipping and taxes calculated at checkout.</p>
                                                 </div>
-                                                <button className='bg-orange-600 px-6 py-4 text-white font-semibold rounded w-full'>Checkout</button>
-                                                <div>
-                                                    <p>or <Link href={"#"}>continue shopping</Link></p>
-                                                </div>
+                                                {/* <button className='bg-indigo-500 hover:bg-indigo-600 px-6 py-4 text-white font-semibold rounded w-full'>Checkout</button> */}
+                                                <Link href={"/cart"} className='bg-orange-600 px-6 py-4 flex justify-center items-center text-white font-semibold rounded w-full'>
+                                                    Checkout
+                                                </Link>  
                                             </SheetFooter>
                                         </SheetContent>
 
@@ -527,9 +530,9 @@ const Navbar = () => {
                                 navigation.map((item, idx) => {
                                     return (
                                         <li key={idx} className="text-gray-600 font-semibold hover:text-indigo-600">
-                                            <a href={item.path}>
+                                            <Link href={item.path}>
                                                 {item.title}
-                                            </a>
+                                            </Link>
                                         </li>
                                     )
                                 })

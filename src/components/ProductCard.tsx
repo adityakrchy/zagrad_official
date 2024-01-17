@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 
 const ProductCard = () => {
     return (
-        <a href="/productpage" className="group relative block">
+        <Link href="/productpage" className="group relative block">
             <div className="relative h-[350px] sm:h-[450px]">
                 <Image
                     src="/assets/t1.png"
@@ -36,7 +37,7 @@ const ProductCard = () => {
                     Shop Now
                 </span>
             </div>
-        </a>
+        </Link>
     )
 }
 
