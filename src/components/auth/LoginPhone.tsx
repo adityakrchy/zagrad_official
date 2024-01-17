@@ -1,6 +1,7 @@
 "use client"
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import { handleKeyPressForInput } from '@/lib/constants'
 
 const LoginPhone = () => {
     const [otpReceived, setOtpReceived] = useState<boolean>(false)
@@ -11,6 +12,7 @@ const LoginPhone = () => {
     }
 
     const inputRefs = [useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null)];
+
     const handleInputChange = (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
 
@@ -20,8 +22,18 @@ const LoginPhone = () => {
             if (nextInputRef.current) {
                 nextInputRef.current.focus();
             }
+        } else if (!value && index > 0) {
+            // Move back to the previous input field if the current input is empty
+            const prevInputRef = inputRefs[index - 1];
+            if (prevInputRef.current) {
+                prevInputRef.current.focus();
+            }
         }
     };
+
+
+
+
     const handleKeyPress = (index: number, e: React.KeyboardEvent<HTMLInputElement>) => {
         // Allow only numeric key presses (0-9)
         const numericRegex = /^[0-9]$/;
@@ -40,6 +52,7 @@ const LoginPhone = () => {
             }
         }
     };
+    
     return (
         <>
             <section className="bg-gray-50 dark:bg-gray-900">
@@ -54,7 +67,21 @@ const LoginPhone = () => {
                             <form className="space-y-4 md:space-y-6">
                                 <div>
                                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Mobile Phone Number</label>
-                                    <input type="number" name="number" id="number" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Phone Number" required />
+                                    {/* <input type="text" name="number" id="number" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Phone Number" required /> */}
+                                    <input
+                                        onKeyPress={handleKeyPressForInput}
+                                        type="text"
+                                        name="number"
+                                        id="number"
+                                        className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Enter Your Phone Number"
+                                        pattern="[0-9]*"
+                                        maxLength={10}
+                                        inputMode="numeric"
+                                        title="Please enter only numeric characters."
+                                        required
+                                    />
+
                                 </div>
                                 {otpReceived && otpReceived ? (<div className='mx-auto max-w-sm mt-20 rounded '>
                                     <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
