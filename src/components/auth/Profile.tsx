@@ -3,8 +3,10 @@ import Link from "next/link";
 import UserAddresses from "../user/UserAddresses";
 import Sidebar from "../layout/Sidebar";
 import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 const Profile = () => {
+  
   return (
     <>
       <section className="py-10">
@@ -14,13 +16,17 @@ const Profile = () => {
             <main className="md:w-2/3 lg:w-3/4 px-4">
               <figure className="flex items-start sm:items-center">
                 <div className="relative">
-                  <Image
-                    className=" rounded-full mr-4"
+                  {/* <Image
+                    className=" rounded-[100%] mr-4"
                     src={"/assets/t1.png"}
                     width={64}
                     height={64}
                     alt={"user name"}
-                  />
+                  /> */}
+                  <Avatar className="w-16 h-16 mr-4">
+                    <AvatarImage src="/assets/t1.png" alt="avatar" />
+                    {/* <AvatarFallback>CN</AvatarFallback> */}
+                  </Avatar>
                 </div>
                 <figcaption>
                   <h5 className="font-semibold text-lg">Ghulam</h5>
@@ -38,9 +44,9 @@ const Profile = () => {
 
               <UserAddresses />
 
-              <Link className="bg-indigo-500" href="/newAddress">
+              <Link className="bg-indigo-500 px-4 py-2 text-white font-bold rounded-lg" href="/newAddress">
                 <button className="px-4 py-2 inline-block ">
-                  <i className="mr-1 fa fa-plus"> Add new address</i>
+                  <p className="mr-1 fa fa-plus "> Add new address</p>
                 </button>
               </Link>
 

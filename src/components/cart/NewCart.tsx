@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { ScrollArea } from "@/components/ui/scroll-area"
 import Link from 'next/link'
@@ -19,7 +20,16 @@ const NewCart = () => {
                         <div>
                             <div className="pb-5">
                                 <h1 className="font-semibold text-2xl">Address</h1>
-                                <Image src={"/address.png"} width={500} height={50} alt='..' />
+                                {/* <Image src={"/address.png"} width={500} height={50} alt='..' /> */}
+                                <div className='flex justify-between border p-4 rounded-lg'>
+                                    <div>
+                                        <p>Deliver to: {"Name, Pincode"}</p>
+                                        <p>{"Address"}</p>
+                                    </div>
+                                    <div className='flex items-center justify-center' >
+                                        <Link className='border-2 border-indigo-600 px-4 text-indigo-600 py-2 font-bold' href={"/changeaddress"}>Change Address</Link>
+                                    </div>
+                                </div>
                             </div>
                             <div className="flex justify-between border-b pb-8">
                                 <h1 className="font-semibold text-2xl">Shopping Cart</h1>
@@ -47,7 +57,7 @@ const NewCart = () => {
                                         <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                                         </svg>
 
-                                        <input className="mx-2 border text-center w-8" type="text" value="1" />
+                                        <input className="mx-2 border text-center w-8" type="text" value="1" onChange={() => { }} />
 
                                         <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
                                             <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -72,7 +82,7 @@ const NewCart = () => {
                                         <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                                         </svg>
 
-                                        <input className="mx-2 border text-center w-8" type="text" value="1" />
+                                        <input className="mx-2 border text-center w-8" type="text" value="1" onChange={() => { }} />
 
                                         <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
                                             <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -97,7 +107,7 @@ const NewCart = () => {
                                         <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                                         </svg>
 
-                                        <input className="mx-2 border text-center w-8" type="text" value="1" />
+                                        <input className="mx-2 border text-center w-8" type="text" value="1" onChange={() => { }} />
 
                                         <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
                                             <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -122,7 +132,7 @@ const NewCart = () => {
                                         <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                                         </svg>
 
-                                        <input className="mx-2 border text-center w-8" type="text" value="1" />
+                                        <input className="mx-2 border text-center w-8" type="text" value="1" onChange={() => { }} />
 
                                         <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
                                             <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -146,7 +156,7 @@ const NewCart = () => {
                                     <div className="flex justify-center w-1/5">
                                         <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                                         </svg>
-                                        <input className="mx-2 border text-center w-8" type="text" value="1" />
+                                        <input className="mx-2 border text-center w-8" type="text" value="1" onChange={() => { }} />
 
                                         <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
                                             <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -171,11 +181,12 @@ const NewCart = () => {
 
                     <div id="summary" className="bg-[#f6f6f6] w-1/4 px-8 py-10">
                         <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
+                       
                         <div className="py-3.5">
                             <label htmlFor="promo" className="font-semibold inline-block mb-3 text-sm uppercase">Promo Code</label>
                             <input type="text" id="promo" placeholder="Enter your code" className="p-2 text-sm w-full" />
                         </div>
-                        <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">Apply</button>
+                        <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white mb-36 uppercase">Apply</button>
                         <div className="flex justify-between mt-10 mb-5">
                             <span className="font-semibold text-sm uppercase">Price Details {"3"}</span>
                         </div>
