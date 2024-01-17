@@ -63,12 +63,16 @@ const Navbar = () => {
                     <div>
                         <ul className="flex flex-col-reverse items-center gap-2 justify-center space-x-0  lg:flex-row ">
 
-                            <li className="mt-4 lg:mt-0 flex ">
-                                <Image className='cursor-pointer  text-gray-600 hover:text-indigo-600' src={"/profile.svg"} width={24} height={24} alt='PRofile' />
+                            <li className="mt-4 lg:mt-0 flex justify-center items-center">
+
                                 {/* <Link href="/profile" className="py-3 px-1 font-semibold text-center border text-gray-600 hover:text-indigo-600 rounded-md block lg:inline lg:border-0">
                                     Login
                                 </Link> */}
-                                <Link href="/loginEmail" className="py-3 px-1 font-semibold text-center border text-gray-600 hover:text-indigo-600 rounded-md block lg:inline lg:border-0">
+                                <Link className='cursor-pointer  text-gray-600 hover:text-indigo-600' href={"/loginEmail"}>
+                                <Image className='cursor-pointer  text-gray-600 hover:text-indigo-600' src={"/profile.svg"} width={24} height={24} alt='PRofile' />
+                                </Link>
+                                {/* <Image className='cursor-pointer  text-gray-600 hover:text-indigo-600' src={"/profile.svg"} width={24} height={24} alt='PRofile' /> */}
+                                <Link href="/loginEmail" className="py-3 block px-1 font-semibold text-center text-gray-600 hover:text-indigo-600 rounded-md lg:inline">
                                     Login
                                 </Link>
                             </li>

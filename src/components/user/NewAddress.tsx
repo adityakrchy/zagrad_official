@@ -1,7 +1,8 @@
+'use client'
 import React from "react";
 // import Sidebar from "../layout/Sidebar";
 import Sidebar from "@/components/layout/Sidebar"
-
+import { handleKeyPressForInput } from '@/lib/constants'
 import { countries } from "countries-list";
 
 const indianStates = [
@@ -118,9 +119,11 @@ const NewAddress = () => {
                     <div className="mb-4 md:col-span-1">
                       <label className="block mb-1"> ZIP code </label>
                       <input
+                        onKeyPress={handleKeyPressForInput}
                         className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full"
-                        type="number"
+                        type="text"
                         placeholder="Type zip code here"
+                        maxLength={6}
                         required
                       />
                     </div>
@@ -128,9 +131,11 @@ const NewAddress = () => {
                     <div className="mb-4 md:col-span-1">
                       <label className="block mb-1"> Phone No </label>
                       <input
+                        onKeyPress={handleKeyPressForInput}
                         className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full"
-                        type="number"
+                        type="text"
                         placeholder="Type phone no here"
+                        maxLength={10}
                         required
                       />
                     </div>
