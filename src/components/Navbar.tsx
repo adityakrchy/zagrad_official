@@ -69,7 +69,7 @@ const Navbar = () => {
                                     Login
                                 </Link> */}
                                 <Link className='cursor-pointer  text-gray-600 hover:text-indigo-600' href={"/loginEmail"}>
-                                <Image className='cursor-pointer  text-gray-600 hover:text-indigo-600' src={"/profile.svg"} width={24} height={24} alt='PRofile' />
+                                    <Image className='cursor-pointer  text-gray-600 hover:text-indigo-600' src={"/profile.svg"} width={24} height={24} alt='PRofile' />
                                 </Link>
                                 {/* <Image className='cursor-pointer  text-gray-600 hover:text-indigo-600' src={"/profile.svg"} width={24} height={24} alt='PRofile' /> */}
                                 <Link href="/loginEmail" className="py-3 block px-1 font-semibold text-center text-gray-600 hover:text-indigo-600 rounded-md lg:inline">
@@ -77,11 +77,16 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li className="mt-4 lg:mt-0 flex">
+                                <Link href={"/cart"} className='flex w-16'>
+                                    <Image className='cursor-pointer' src={"/cart.svg"} width={35} height={35} alt='cart' />
+                                    <span className='relative right-[22px] z-10 font-semibold'>1</span>
 
-                                <div>
+                                </Link>
+
+                                {/* <div>
                                     <SliderCart />
 
-                                </div>
+                                </div> */}
                             </li>
                         </ul>
                     </div>
