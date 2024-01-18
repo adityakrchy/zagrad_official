@@ -9,7 +9,7 @@ const page = () => {
         <h1 className='text-xl font-bold text-gray-900 sm:text-3xl'>TODAY </h1>
         <h3 className='text-l font-bold text-gray-900 sm:text-3xl'>SALES</h3>
       </div>
-      <div className='grid grid-cols-4 gap-4 px-4'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-4 px-4'>
         <Men />
         <Women />
         <Men />
