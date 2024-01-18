@@ -36,20 +36,13 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
             <div className=" py-8">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row -mx-4">
-                        <div className="md:flex-1 px-4">
-                            {/* <div>
-                                <Image src="/assets/t3.png" width={200} height={200} alt='' />
-                            </div> */}
-                            <div className="h-[460px] hidden md:block rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
-                                <Image className="w-full h-full object-cover" width={300} height={460} src={imgUrl} alt="Product Image" />
-                            </div>
-                            <div className='hidden md:block'>
+                        <div className=" md:flex-1 px-4">
+                            <div className='hidden sm:block'>
+                                <div className="h-[460px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
+                                    <Image className="w-full h-full object-cover" width={300} height={460} src={imgUrl} alt="Product Image" />
+                                </div>
 
                                 <div className='mb-4 flex gap-2 justify-center items-center'>
-                                    {/* <Image onClick={changeImage} className="object-cover" width={100} height={100} src="/assets/t1.png" alt="Product Image" />
-                                <Image className="object-cover" width={100} height={100} src={ImgSRC[0].t1} alt="Product Image" />
-                                <Image className="object-cover" width={100} height={100} src="/assets/t3.png" alt="Product Image" />
-                                <Image className="object-cover" width={100} height={100} src="/assets/t4.png" alt="Product Image" /> */}
                                     {
                                         ImgSRC.map((item, idx) => {
                                             return (
@@ -61,26 +54,46 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     }
                                 </div>
                             </div>
-                            <div className='flex'>
-                                <div className="h-[460px] block md:hidden rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
+                            {/* <div className='flex flex-row md:hidden gap-2'>
+                                <div className="h-[460px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
                                     <Image className="w-full h-full object-cover" width={300} height={460} src={imgUrl} alt="Product Image" />
                                 </div>
-                                <div className='block md:hidden'>
 
+                                <div className=''>
+                                    {
+                                        ImgSRC.map((item, idx) => {
+                                            return (
+                                                <Image onClick={() => {
+                                                    changeImage(item, imgUrl)
+                                                }} key={idx} className="object-cover cursor-pointer aspect-square pb-2" width={100} height={100} src={item} alt="Product Image" />
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div> */}
 
-                                    <div className='mb-4 gap-2 justify-center items-center'>
-                                        {
-                                            ImgSRC.map((item, idx) => {
-                                                return (
-                                                    <Image onClick={() => {
-                                                        changeImage(item, imgUrl)
-                                                    }} key={idx} className="object-cover cursor-pointer aspect-square" width={100} height={100} src={item} alt="Product Image" />
-                                                )
-                                            })
-                                        }
-                                    </div>
+                            <div className='flex flex-row sm:hidden gap-2'>
+                                <div className="h-[460px] w-[300px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
+                                    <Image className="w-full h-full object-cover" width={300} height={460} src={imgUrl} alt="Product Image" />
+                                </div>
+
+                                <div className=''>
+                                    {ImgSRC.map((item, idx) => (
+                                        <Image
+                                            onClick={() => {
+                                                changeImage(item, imgUrl);
+                                            }}
+                                            key={idx}
+                                            className="object-cover cursor-pointer aspect-square pb-2"
+                                            width={100}
+                                            height={100}
+                                            src={item}
+                                            alt={`Product Image ${idx + 1}`}
+                                        />
+                                    ))}
                                 </div>
                             </div>
+
 
                             <div className='hidden md:block'>
                                 <div className="flex -mx-2 mb-4 sm:hidden md:flex">
@@ -185,81 +198,6 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                     </div>
                     <div className="mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:items-stretch">
-
-                            {/* <div className=" lg:col-span-2 lg:py-8">
-                                <ul className="procductRes grid grid-cols-4 gap-4">
-                                    <li>
-                                        
-                                    </li>
-
-                                    <li>
-                                        <Link href="#" className="group block">
-                                            <Image
-                                                src="/assets/t2.png"
-                                                alt=""
-                                                width={1280}
-                                                height={500}
-                                                className="aspect-square w-full rounded object-cover"
-                                            />
-
-                                            <div className="mt-3">
-                                                <h3
-                                                    className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
-                                                >
-                                                    Just Keep moving T-Shirt
-                                                </h3>
-
-                                                <p className="mt-1 text-sm text-gray-700">$150</p>
-                                            </div>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link href="#" className="group block">
-                                            <Image
-                                                src="/assets/t1.png"
-                                                alt=""
-                                                className="aspect-square w-full rounded object-cover"
-                                                width={450}
-                                                height={350}
-                                            />
-
-                                            <div className="mt-3">
-                                                <h3
-                                                    className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
-                                                >
-                                                    Adventure T-Shirt
-                                                </h3>
-
-                                                <p className="mt-1 text-sm text-gray-700">$150</p>
-                                            </div>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link href="#" className="group block">
-                                            <Image
-                                                src="/assets/t2.png"
-                                                alt=""
-                                                width={1280}
-                                                height={500}
-                                                className="aspect-square w-full rounded object-cover"
-                                            />
-
-                                            <div className="mt-3">
-                                                <h3
-                                                    className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
-                                                >
-                                                    Just Keep moving T-Shirt
-                                                </h3>
-
-                                                <p className="mt-1 text-sm text-gray-700">$150</p>
-                                            </div>
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div> */}
-
                             <Link href="#" className="group block">
                                 <Image
                                     src="/assets/t1.png"
