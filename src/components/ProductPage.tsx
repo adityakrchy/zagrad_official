@@ -40,30 +40,56 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                             {/* <div>
                                 <Image src="/assets/t3.png" width={200} height={200} alt='' />
                             </div> */}
-                            <div className="h-[460px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
+                            <div className="h-[460px] hidden md:block rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
                                 <Image className="w-full h-full object-cover" width={300} height={460} src={imgUrl} alt="Product Image" />
                             </div>
-                            <div className='mb-4 flex gap-2 justify-center items-center'>
-                                {/* <Image onClick={changeImage} className="object-cover" width={100} height={100} src="/assets/t1.png" alt="Product Image" />
+                            <div className='hidden md:block'>
+
+                                <div className='mb-4 flex gap-2 justify-center items-center'>
+                                    {/* <Image onClick={changeImage} className="object-cover" width={100} height={100} src="/assets/t1.png" alt="Product Image" />
                                 <Image className="object-cover" width={100} height={100} src={ImgSRC[0].t1} alt="Product Image" />
                                 <Image className="object-cover" width={100} height={100} src="/assets/t3.png" alt="Product Image" />
                                 <Image className="object-cover" width={100} height={100} src="/assets/t4.png" alt="Product Image" /> */}
-                                {
-                                    ImgSRC.map((item, idx) => {
-                                        return (
-                                            <Image onClick={() => {
-                                                changeImage(item, imgUrl)
-                                            }} key={idx} className="object-cover cursor-pointer aspect-square" width={100} height={100} src={item} alt="Product Image" />
-                                        )
-                                    })
-                                }
-                            </div>
-                            <div className="flex -mx-2 mb-4 sm:hidden md:flex">
-                                <div className="w-1/2 px-2">
-                                    <button className="w-full bg-gray-900  text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 ">Buy Now</button>
+                                    {
+                                        ImgSRC.map((item, idx) => {
+                                            return (
+                                                <Image onClick={() => {
+                                                    changeImage(item, imgUrl)
+                                                }} key={idx} className="object-cover cursor-pointer aspect-square" width={100} height={100} src={item} alt="Product Image" />
+                                            )
+                                        })
+                                    }
                                 </div>
-                                <div className="w-1/2 px-2">
-                                    <Link href={"/cart"}><button className="w-full bg-gray-200  text-gray-800  py-2 px-4 rounded-full font-bold hover:bg-gray-300 ">Add to Cart</button></Link>
+                            </div>
+                            <div className='flex'>
+                                <div className="h-[460px] block md:hidden rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
+                                    <Image className="w-full h-full object-cover" width={300} height={460} src={imgUrl} alt="Product Image" />
+                                </div>
+                                <div className='block md:hidden'>
+
+
+                                    <div className='mb-4 gap-2 justify-center items-center'>
+                                        {
+                                            ImgSRC.map((item, idx) => {
+                                                return (
+                                                    <Image onClick={() => {
+                                                        changeImage(item, imgUrl)
+                                                    }} key={idx} className="object-cover cursor-pointer aspect-square" width={100} height={100} src={item} alt="Product Image" />
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='hidden md:block'>
+                                <div className="flex -mx-2 mb-4 sm:hidden md:flex">
+                                    <div className="w-1/2 px-2">
+                                        <button className="w-full bg-gray-900  text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 ">Buy Now</button>
+                                    </div>
+                                    <div className="w-1/2 px-2">
+                                        <Link href={"/cart"}><button className="w-full bg-gray-200  text-gray-800  py-2 px-4 rounded-full font-bold hover:bg-gray-300 ">Add to Cart</button></Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -101,18 +127,38 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">XXL</button>
                                 </div>
                             </div>
-                            <div className="mb-4">
-                                <span className="font-bold text-gray-700 dark:text-gray-300">Quantity:</span>
-                                <div className="flex items-center mt-2">
-                                    <input type="number" value={1} className='w-16 border-4 pl-2 rounded-2xl custom-number-input' />
+                            <div className="w-24 pb-5">
+                                <span className="font-bold text-gray-700 dark:text-gray-300">Quantity</span>
+                                <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                    <button
+                                        data-action="decrement"
+                                        className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none"
+                                    >
+                                        <span className="m-auto text-2xl font-thin">−</span>
+                                    </button>
+                                    <input
+                                        type="number"
+                                        className=" focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-900  outline-none custom-input-number"
+                                        name="custom-input-number"
+                                        value={0}
+                                        readOnly
+                                    ></input>
+                                    <button
+                                        data-action="increment"
+                                        className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer"
+                                    >
+                                        <span className="m-auto text-2xl font-thin">+</span>
+                                    </button>
                                 </div>
                             </div>
-                            <div className="flex -mx-2 mb-4 sm:flex md:hidden">
-                                <div className="w-1/2 px-2">
-                                    <button className="w-full bg-gray-900  text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 ">Buy Now</button>
-                                </div>
-                                <div className="w-1/2 px-2">
-                                    <Link className='w-full bg-gray-200  text-gray-800  py-2 px-4 rounded-full font-bold hover:bg-gray-300' href={"/cart"}>Add to Cart</Link>
+                            <div className='block md:hidden'>
+                                <div className="flex -mx-2 mb-4 md:flex">
+                                    <div className="w-1/2 px-2">
+                                        <button className="w-full bg-gray-900  text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 ">Buy Now</button>
+                                    </div>
+                                    <div className="w-1/2 px-2">
+                                        <Link href={"/cart"}><button className="w-full bg-gray-200  text-gray-800  py-2 px-4 rounded-full font-bold hover:bg-gray-300 ">Add to Cart</button></Link>
+                                    </div>
                                 </div>
                             </div>
                             <div>
@@ -138,7 +184,7 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                         <h2 className='text-xl font-bold text-gray-900 sm:text-3xl'>Related Products</h2>
                     </div>
                     <div className="mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-                        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-4 lg:items-stretch">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:items-stretch">
 
                             {/* <div className=" lg:col-span-2 lg:py-8">
                                 <ul className="procductRes grid grid-cols-4 gap-4">
@@ -298,7 +344,7 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
             <NewReview />
             <hr />
 
-            <div className="font-semibold">
+            <div className="font-semibold pl-5">
                 <h1 className="text-gray-500 review-title mb-6 mt-10 text-2xl">
                     Other Customers Reviews
                 </h1>

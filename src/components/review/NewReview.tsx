@@ -3,7 +3,7 @@ import StarRatings from "react-star-ratings";
 
 const NewReview = () => {
   return (
-    <div>
+    <div className="pl-5">
       <hr className="my-4" />
       <h1 className="text-gray-500 review-title my-5 text-2xl">Your Review</h1>
 
@@ -11,7 +11,7 @@ const NewReview = () => {
       <div className="mb-4 mt-3">
         <div className="ratings">
           <StarRatings
-            rating={5}
+            rating={4}
             starRatedColor="#ffb829"
             numberOfStars={5}
             name="rating"
