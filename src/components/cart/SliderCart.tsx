@@ -19,7 +19,7 @@ const SliderCart = () => {
                     <SheetDescription>
                         <div className="mt-8">
                             <div className="flow-root">
-                                <ScrollArea className="w-full h-[550px]">
+                                <ScrollArea className="w-full h-[800px]">
                                     <ul role="list" className="-my-6 divide-y divide-gray-200">
                                         <li className="flex py-6">
                                             <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
