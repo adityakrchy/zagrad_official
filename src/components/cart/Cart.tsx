@@ -470,7 +470,7 @@ const Cart = () => {
 
                 <div className="py-3.5">
                   <label htmlFor="promo" className="font-semibold inline-block mb-3 text-sm uppercase">Promo Code</label>
-                  <input type="text" id="promo" placeholder="Enter your code" className="p-2 text-sm w-full" />
+                  <input type="text" id="promo" placeholder="Enter your code" className="p-2 text-sm w-full border" />
                 </div>
                 <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white mb-5 uppercase">Apply</button>
                 <ul className="mb-5">
