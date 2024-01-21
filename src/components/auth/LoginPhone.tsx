@@ -66,7 +66,7 @@ const LoginPhone = () => {
                             <hr />
                             <form className="space-y-4 md:space-y-6">
                                 <div>
-                                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Number</label>
+                                    <label htmlFor="number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Number</label>
                                     <div className="relative">
                                         <span className="absolute left-2.5 top-2.5 text-gray-600 dark:text-gray-400">+91 |</span>
                                         <input
