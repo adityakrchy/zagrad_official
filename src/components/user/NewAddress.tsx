@@ -129,15 +129,25 @@ const NewAddress = () => {
                     </div>
 
                     <div className="mb-4 md:col-span-1">
-                      <label className="block mb-1"> Phone No </label>
-                      <input
-                        onKeyPress={handleKeyPressForInput}
-                        className="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full"
-                        type="text"
-                        placeholder="Type phone no here"
-                        maxLength={10}
-                        required
-                      />
+                      <label className="block mb-1"> Mobile Number </label>
+                      <div className="relative">
+                        <span className="absolute left-2.5 top-2.5 text-gray-600 dark:text-gray-400">+91 |</span>
+                        <input
+                          onKeyPress={handleKeyPressForInput}
+                          // type="tel"
+                          type="text"
+                          name="number"
+                          autoComplete="new-number"
+                          id="number"
+                          className="bg-gray-50 mobileNumberInput border border-gray-300 text-gray-900 sm:text-sm rounded-lg pl-16 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Mobile Number*"
+                          pattern="[0-9]*"
+                          maxLength={10}
+                          inputMode="numeric"
+                          title="Please enter only numeric characters."
+                          required
+                        />
+                      </div>
                     </div>
                   </div>
 

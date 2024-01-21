@@ -52,7 +52,7 @@ const LoginPhone = () => {
             }
         }
     };
-    
+
     return (
         <>
             <section className="bg-gray-50 dark:bg-gray-900">
@@ -66,21 +66,55 @@ const LoginPhone = () => {
                             <hr />
                             <form className="space-y-4 md:space-y-6">
                                 <div>
-                                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Mobile Phone Number</label>
+                                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Number</label>
+                                    <div className="relative">
+                                        <span className="absolute left-2.5 top-2.5 text-gray-600 dark:text-gray-400">+91 |</span>
+                                        <input
+                                            onKeyPress={handleKeyPressForInput}
+                                            // type='tel'
+                                            type="text"
+                                            name="number"
+                                            autoComplete="new-number"
+                                            id="number"
+                                            className="bg-gray-50 mobileNumberInput border border-gray-300 text-gray-900 sm:text-sm rounded-lg pl-16 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Mobile Number*"
+                                            pattern="[0-9]*"
+                                            maxLength={10}
+                                            inputMode="numeric"
+                                            title="Please enter only numeric characters."
+                                            required
+                                        />
+                                    </div>
+
+
+
                                     {/* <input type="text" name="number" id="number" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Phone Number" required /> */}
-                                    <input
-                                        onKeyPress={handleKeyPressForInput}
-                                        type="text"
-                                        name="number"
-                                        id="number"
-                                        className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Enter Your Phone Number"
-                                        pattern="[0-9]*"
-                                        maxLength={10}
-                                        inputMode="numeric"
-                                        title="Please enter only numeric characters."
-                                        required
-                                    />
+                                    {/* <div>
+
+                                        <input
+                                            onKeyPress={handleKeyPressForInput}
+                                            type="text"
+                                            name="number"
+                                            autoComplete=''
+                                            id="number"
+                                            className="bg-gray-50 mobileNumberInput border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Enter Your Phone Number"
+                                            pattern="[0-9]*"
+                                            maxLength={10}
+                                            inputMode="numeric"
+                                            title="Please enter only numeric characters."
+                                            required
+                                        />
+                                        <span>+91
+                                            <span>|</span>
+                                            <span>Mobile Number<span>*</span></span>
+                                        </span>
+                                    </div> */}
+                                    {/* <div className="form-group ">
+                                        <input autoComplete="new-password" id="" type="tel" className="form-control mobileNumberInput" placeholder="" maxLength={10} value="" />
+                                        <span className="placeholderAlternative mobileNumber">
+                                        +91
+                                        <span className="padding: 0px 10px; position: relative; bottom: 1px;">|</span><span className="mobileNumberPlacholder">Mobile Number<span className="color: rgb(255, 87, 34);">*</span></span> </span><i className="bar"></i></div> */}
 
                                 </div>
                                 {otpReceived && otpReceived ? (<div className='mx-auto max-w-sm mt-20 rounded '>

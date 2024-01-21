@@ -34,24 +34,42 @@ const Register = () => {
                                     <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
                                     <input type="text" name="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Name" required />
                                 </div>
-                                <div className='gap-6 sm:flex'>
+
+                                <div className="mb-4 md:col-span-1">
+                                    <label htmlFor='number' className="block text-sm mb-2"> Mobile Number </label>
+                                    <div className="relative">
+                                        <span className="absolute left-2.5 top-2.5 text-gray-600 dark:text-gray-400">+91 |</span>
+                                        <input
+                                            onKeyPress={handleKeyPressForInput}
+                                            // type="tel"
+                                            type='text'
+                                            name="number"
+                                            autoComplete="new-number"
+                                            id="number"
+                                            className="bg-gray-50 mobileNumberInput border border-gray-300 text-gray-900 sm:text-sm rounded-lg pl-16 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Mobile Number*"
+                                            pattern="[0-9]*"
+                                            maxLength={10}
+                                            inputMode="numeric"
+                                            title="Please enter only numeric characters."
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label htmlFor="email" className="block mt-2 mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                                    <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@gamil.com" required />
+                                </div>
+                                <div className='flex gap-4'>
 
                                     <div>
-                                        <label htmlFor="number" className="block mt-2 mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Number</label>
-                                        <input type="text" name="number" maxLength={10} id="number" onKeyPress={handleKeyPressForInput} inputMode="numeric" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                                        <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                                        <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                                     </div>
                                     <div>
-                                        <label htmlFor="email" className="block mt-2 mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                                        <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required />
+                                        <label htmlFor="conformpassword" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Conform Password</label>
+                                        <input type="password" name="conformpassword" id="conformpassword" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                                     </div>
-                                </div>
-                                <div>
-                                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                                    <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                                </div>
-                                <div>
-                                    <label htmlFor="conformpassword" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Conform Password</label>
-                                    <input type="password" name="conformpassword" id="conformpassword" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                                 </div>
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-start">
