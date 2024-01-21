@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
+import { AiOutlineSafety } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -157,15 +158,19 @@ const Footer = () => {
                 </div>
               </form>
             </div> */}
-            <div>
+            <div className='flex flex-col justify-center items-start'>
               <div className='flex justify-center items-center'>
-                <Image src={"/original.png"} width={65} height={65} alt='original' />
+                <Image src={"/original.png"} width={70} height={70} alt='original' />
                 <p className='px-4 text-gray-500'><b className='text-black font-medium'> 100% ORIGINAL </b> guarantee for all products at zagrad</p>
               </div>
 
               <div className='pt-6 flex justify-center items-center'>
                 <Image src={"/returnAt.svg"} width={65} height={65} alt='original' />
                 <p className='px-4 text-gray-500'><b className='text-black font-medium'> Return within 7days </b> of receiving your order</p>
+              </div>
+              <div className='pt-6 flex justify-center items-center'>
+                <AiOutlineSafety className='w-[65px] h-[65px] text-[#676b79]' />
+                <p className='px-4 text-gray-500'><b className='text-black font-medium'> </b> Secure & Safe Payment</p>
               </div>
             </div>
           </div>
