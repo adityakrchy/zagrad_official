@@ -1,10 +1,10 @@
 import React from 'react'
 import ProductCard from '../ProductCard'
 
-const Men = () => {
+const NewLaunched = () => {
   return (
     <ProductCard />
   )
 }
 
-export default Men
+export default NewLaunched

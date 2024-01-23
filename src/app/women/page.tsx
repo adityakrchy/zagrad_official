@@ -1,10 +1,12 @@
-import Women from '@/components/categories/Women'
+// 'usw client' 
+import FilterWomen from '@/components/filter/FilterWomen'
+// import Women from '@/components/categories/Women'
 import React from 'react'
 
 const page = () => {
   return (
     <>
-    <div className='text-center mb-4'>
+    {/* <div className='text-center mb-4'>
      <h1 className='text-xl font-bold text-gray-900 sm:text-3xl'>WOMEN'S </h1>
      <h3 className='text-l font-bold text-gray-900 sm:text-3xl'>T-SHIRTS</h3>
      </div>
@@ -21,7 +23,8 @@ const page = () => {
         <Women />
         <Women />
         <Women />
-      </div>
+      </div> */}
+      <FilterWomen />
     </>
   )
 }

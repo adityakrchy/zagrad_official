@@ -5,7 +5,7 @@ import React from 'react'
 const ImageCollection = () => {
     return (
         <section>
-            <div className='text-center'>
+            <div className='text-center pt-6'>
                 <h2 className='text-xl font-bold text-gray-900 sm:text-3xl'>Featured Collection</h2>
             </div>
             <div className="mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
@@ -22,7 +22,7 @@ const ImageCollection = () => {
                             </header>
 
                             <Link
-                                href="#"
+                                href="/allproduct"
                                 className="mt-8 inline-block rounded border border-gray-900 bg-gray-900 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
                             >
                                 Shop All
@@ -33,7 +33,7 @@ const ImageCollection = () => {
                     <div className="lg:col-span-2 lg:py-8">
                         <ul className="grid grid-cols-2 gap-4">
                             <li>
-                                <Link href="/productpage" className="group block">
+                                <Link href="/featuredcollectionwomen" className="group block">
                                     <Image
                                         src="/assets/t1.png"
                                         alt=""
@@ -49,13 +49,13 @@ const ImageCollection = () => {
                                             Adventure T-Shirt
                                         </h3>
 
-                                        <p className="mt-1 text-sm text-gray-700">$150</p>
+                                        <p className="mt-1 text-sm text-gray-700">Start from 499</p>
                                     </div>
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/productpage" className="group block">
+                                <Link href="/featuredcollectionmen" className="group block">
                                     <Image
                                         src="/assets/t2.png"
                                         alt=""
@@ -71,7 +71,7 @@ const ImageCollection = () => {
                                             Just Keep moving T-Shirt
                                         </h3>
 
-                                        <p className="mt-1 text-sm text-gray-700">$150</p>
+                                        <p className="mt-1 text-sm text-gray-700">Start from 449</p>
                                     </div>
                                 </Link>
                             </li>
