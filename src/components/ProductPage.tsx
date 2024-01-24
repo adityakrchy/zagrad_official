@@ -7,6 +7,26 @@ import "@/components/ProductPage.css"
 import Link from 'next/link'
 import NewReview from './review/NewReview'
 import Reviews from './review/Review'
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+    Table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table"
+import { AiOutlineSafety } from 'react-icons/ai'
+
+
+
 
 type ProductPageProps = {
     title: String,
@@ -174,7 +194,32 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <Tabs defaultValue="productdescription" className="w-[400px]">
+                                <TabsList>
+                                    <TabsTrigger value="productdescription">Product Description</TabsTrigger>
+                                    <TabsTrigger value="secureshopping">Secure Shopping</TabsTrigger>
+                                    <TabsTrigger value="delivery">Delivery</TabsTrigger>
+                                    {/* <TabsTrigger value="size">Size Guide</TabsTrigger> */}
+                                </TabsList>
+                                <TabsContent value="productdescription" className='text-gray-500'>
+                                    <div className='py-2 flex justify-center items-center'>
+                                        <Image src={"/original.png"} width={70} height={70} alt='original' />
+                                        <p className='px-4 text-gray-500'><b className='text-black font-medium'> 100% ORIGINAL </b> guarantee for all products at zagrad</p>
+                                    </div>
+                                    Introducing our Urban Comfort Tee – the perfect blend of style and comfort. Crafted from premium 100% cotton, this t-shirt offers a soft, breathable feel for all-day wear. With a modern design, classic crew neck, and tailored fit, it's a versatile wardrobe essential. Choose from a range of vibrant colors and elevate your casual look effortlessly. Upgrade your comfort game with the Urban Comfort Tee – where fashion meets relaxation.</TabsContent>
+                                <TabsContent value="secureshopping" className='text-gray-500'> <div className='flex items-center'>  <AiOutlineSafety className='w-[65px] h-[65px] text-[#676b79]' />
+                                    <p className='px-2 text-gray-500'><b className='text-black font-medium'> </b> Secure & Safe Payment</p></div>
+                                    Shop with confidence! Our secure shopping ensures your personal and financial information is protected with top-notch encryption technology. Your privacy and security are our priorities throughout the entire transaction process. Enjoy worry-free shopping online.</TabsContent>
+                                <TabsContent value="delivery" className='text-gray-500'>
+                                    <div className='pt-6 flex items-center'>
+                                        <Image src={"/returnAt.svg"} width={65} height={65} alt='original' />
+                                        <p className='px-4 text-gray-500'><b className='text-black font-medium'> Return within 7days </b> of receiving your order</p>
+                                    </div>
+                                    Experience hassle-free delivery! We prioritize swift and reliable shipping to bring your order straight to your doorstep. Track your package in real-time and enjoy a seamless experience from purchase to receipt. Your satisfaction is our priority.</TabsContent>
+                                {/* <TabsContent value="size">Change your size here.</TabsContent> */}
+                            </Tabs>
+
+                            {/* <div>
                                 <span className="font-bold text-gray-700 dark:text-gray-300">Product Description:</span>
                                 <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
@@ -183,7 +228,53 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     ut erat vitae nisi ultrices placerat non eget velit. Integer ornare mi sed ipsum lacinia, non
                                     sagittis mauris blandit. Morbi fermentum libero vel nisl suscipit, nec tincidunt mi consectetur.
                                 </p>
-                            </div>
+                            </div> */}
+                            <Accordion type="single" collapsible>
+                                <AccordionItem value="item-1">
+                                    <AccordionTrigger>Size Guide</AccordionTrigger>
+                                    <AccordionContent>
+                                        <Table>
+                                            <TableCaption>Size and Measurement Chart</TableCaption>
+                                            <TableHeader>
+                                                <TableRow>
+                                                    <TableHead className="w-[100px]">Size</TableHead>
+                                                    <TableHead>Chest (in)</TableHead>
+                                                    <TableHead>Front Length (in)</TableHead>
+                                                    <TableHead >Across Shoulder (in)</TableHead>
+                                                </TableRow>
+                                            </TableHeader>
+                                            <TableBody>
+                                                <TableRow>
+                                                    <TableCell className="font-medium">S</TableCell>
+                                                    <TableCell>40.5</TableCell>
+                                                    <TableCell>28.0</TableCell>
+                                                    <TableCell>19.3</TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell className="font-medium">M</TableCell>
+                                                    <TableCell>40.5</TableCell>
+                                                    <TableCell>28.0</TableCell>
+                                                    <TableCell>19.3</TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell className="font-medium">L</TableCell>
+                                                    <TableCell>40.5</TableCell>
+                                                    <TableCell>28.0</TableCell>
+                                                    <TableCell>19.3</TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <TableCell className="font-medium">XL</TableCell>
+                                                    <TableCell>40.5</TableCell>
+                                                    <TableCell>28.0</TableCell>
+                                                    <TableCell>19.3</TableCell>
+                                                </TableRow>
+                                            </TableBody>
+                                        </Table>
+
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+
                         </div>
                     </div>
                 </div>
