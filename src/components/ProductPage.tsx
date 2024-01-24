@@ -207,8 +207,11 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                         <p className='px-4 text-gray-500'><b className='text-black font-medium'> 100% ORIGINAL </b> guarantee for all products at zagrad</p>
                                     </div>
                                     Introducing our Urban Comfort Tee – the perfect blend of style and comfort. Crafted from premium 100% cotton, this t-shirt offers a soft, breathable feel for all-day wear. With a modern design, classic crew neck, and tailored fit, it's a versatile wardrobe essential. Choose from a range of vibrant colors and elevate your casual look effortlessly. Upgrade your comfort game with the Urban Comfort Tee – where fashion meets relaxation.</TabsContent>
-                                <TabsContent value="secureshopping" className='text-gray-500'> <div className='flex items-center'>  <AiOutlineSafety className='w-[65px] h-[65px] text-[#676b79]' />
-                                    <p className='px-2 text-gray-500'><b className='text-black font-medium'> </b> Secure & Safe Payment</p></div>
+                                <TabsContent value="secureshopping" className='text-gray-500'>
+                                    <div className='flex items-center'>
+                                        <AiOutlineSafety className='w-[65px] h-[65px] text-[#676b79]' />
+                                        <p className='px-2 text-gray-500'><b className='text-black font-medium'> </b> Secure & Safe Payment</p>
+                                    </div>
                                     Shop with confidence! Our secure shopping ensures your personal and financial information is protected with top-notch encryption technology. Your privacy and security are our priorities throughout the entire transaction process. Enjoy worry-free shopping online.</TabsContent>
                                 <TabsContent value="delivery" className='text-gray-500'>
                                     <div className='pt-6 flex items-center'>

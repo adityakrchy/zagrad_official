@@ -180,11 +180,12 @@ const Footer = () => {
           <p className="text-center text-sm text-gray-500 sm:text-left">
             Copyright &copy; 2024 Zagrad. All rights reserved.
           </p>
+          <Image src={"/Frame-payment.png"} width={500} height={15} alt={''} />
 
           <ul className="mt-4 flex justify-center gap-6 sm:mt-0 sm:justify-start">
             <li>
               <Link
-                href="/"
+                href="https://www.facebook.com/profile.php?id=61555479663198"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-900"
@@ -202,7 +203,7 @@ const Footer = () => {
 
             <li>
               <Link
-                href="/"
+                href="https://www.instagram.com/zagrad_official"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-900"
