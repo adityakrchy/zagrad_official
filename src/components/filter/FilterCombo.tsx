@@ -3,7 +3,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import Anime from '../categories/Anime'
+import Combo from '../categories/Combo'
 
 const sortOptions = [
   { name: 'Most Popular', href: '#', current: true },
@@ -65,12 +65,12 @@ export default function Example() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
   return (
-    
+
     <div className="bg-white">
       <div className='text-center mb-4'>
-     <h1 className='text-xl font-bold text-gray-900 sm:text-3xl uppercase'>Anime</h1>
-     <h3 className='text-l font-bold text-gray-900 sm:text-3xl uppercase'>T-Shirts</h3>
-     </div>
+        <h1 className='text-xl font-bold text-gray-900 sm:text-3xl uppercase'>Best </h1>
+        <h3 className='text-l font-bold text-gray-900 sm:text-3xl uppercase'>Combos</h3>
+      </div>
       <div>
         {/* Mobile filter dialog */}
         <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -298,17 +298,18 @@ export default function Example() {
 
               {/* Product grid */}
               <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                <Anime />
-                <Anime />
-                <Anime />
-                <Anime />
-                <Anime />
-                <Anime />
-                <Anime />
-                <Anime />
-                <Anime />
-                <Anime />
-                <Anime />           
+                <Combo />
+                <Combo />
+                <Combo />
+                <Combo />
+                <Combo />
+                <Combo />
+                <Combo />
+                <Combo />
+                <Combo />
+                <Combo />
+                <Combo />
+                <Combo />
               </div>
             </div>
           </section>
