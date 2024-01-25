@@ -3,7 +3,8 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import Sale from '../categories/Sale'
+import Sale from '../categories/Anime'
+import Anime from '../categories/Anime'
 
 const sortOptions = [
   { name: 'Most Popular', href: '#', current: true },
@@ -68,8 +69,8 @@ export default function Example() {
     
     <div className="bg-white">
       <div className='text-center mb-4'>
-     <h1 className='text-xl font-bold text-gray-900 sm:text-3xl uppercase'>Today</h1>
-     <h3 className='text-l font-bold text-gray-900 sm:text-3xl uppercase'>Sale</h3>
+     <h1 className='text-xl font-bold text-gray-900 sm:text-3xl uppercase'>Anime</h1>
+     <h3 className='text-l font-bold text-gray-900 sm:text-3xl uppercase'>T-Shirt</h3>
      </div>
       <div>
         {/* Mobile filter dialog */}
@@ -298,20 +299,17 @@ export default function Example() {
 
               {/* Product grid */}
               <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
-                <Sale />
+                <Anime />
+                <Anime />
+                <Anime />
+                <Anime />
+                <Anime />
+                <Anime />
+                <Anime />
+                <Anime />
+                <Anime />
+                <Anime />
+                <Anime />           
               </div>
             </div>
           </section>

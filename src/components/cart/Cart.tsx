@@ -9,9 +9,9 @@ const Cart = () => {
         <div className="container max-w-screen-xl mx-auto px-4">
           <h2 className="text-3xl font-semibold mb-2">5 Item(s) in Cart</h2>
         </div>
-        <Link href={"#"} className="container flex cursor-pointer md:justify-center items-center max-w-screen-xl mx-auto px-4">
-        <CiLocationOn className="text-3xl font-semibold mb-2" />
-        <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
+        <Link href={"/trackorder"} className="container flex cursor-pointer md:justify-center items-center max-w-screen-xl mx-auto px-4">
+          <CiLocationOn className="text-3xl font-semibold mb-2" />
+          <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
         </Link>
       </section>
 

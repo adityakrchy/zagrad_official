@@ -23,9 +23,9 @@ const Navbar = () => {
 
         { title: "Women", path: "/women" },
         { title: "Men", path: "/men" },
-        { title: "Sale", path: "/sale" },
+        { title: "Anime", path: "/anime" },
         { title: "Combos", path: "/combos" },
-        { title: "New Arrivals", path: "/newArrivals" },
+        { title: "Computer Geek", path: "/computergeek" },
         // { title: "Wishlist", path: "/wishlist" },
 
     ]
