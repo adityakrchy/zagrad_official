@@ -21,96 +21,96 @@ const Footer = () => {
           className="mt-16 grid grid-cols-1 gap-8 border-t border-gray-100 pt-16 md:grid-cols-4 lg:grid-cols-6"
         >
           <div className="text-center sm:text-left">
-            <p className="text-lg font-medium text-gray-900">About Us</p>
+            <p className="text-lg font-medium text-gray-900">Need Help</p>
 
             <ul className="mt-8 space-y-4 text-sm">
               <li>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                  Company History
+                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/contact">
+                  Contact Us
                 </Link>
               </li>
 
               <li>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Meet the Team </Link>
+                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/trackorder"> Track Order </Link>
               </li>
 
               <li>
                 <Link className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                  Employee Handbook
+                  Returns & Refunds
                 </Link>
               </li>
 
               <li>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Careers </Link>
+                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> FAQ's </Link>
               </li>
             </ul>
           </div>
 
           <div className="text-center sm:text-left">
-            <p className="text-lg font-medium text-gray-900">Our Services</p>
+            <p className="text-lg font-medium text-gray-900">Company</p>
 
             <ul className="mt-8 space-y-4 text-sm">
               <li>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                  Web Development
+                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/about">
+                  About Us
                 </Link>
               </li>
 
               <li>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Web Design </Link>
+                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Zagrad Blog </Link>
               </li>
 
               <li>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Marketing </Link>
+                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Media </Link>
               </li>
 
               <li>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Google Ads </Link>
+                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Collaboration </Link>
               </li>
             </ul>
           </div>
 
           <div className="text-center sm:text-left">
-            <p className="text-lg font-medium text-gray-900">Resources</p>
+            <p className="text-lg font-medium text-gray-900">More Info</p>
 
             <ul className="mt-8 space-y-4 text-sm">
               <li>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Online Guides </Link>
+                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Term and Conditions </Link>
               </li>
 
               <li>
                 <Link className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                  Conference Notes
+                  Privacy Policy
                 </Link>
               </li>
 
               <li>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Forum </Link>
+                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Shipping Policy </Link>
               </li>
 
               <li>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Downloads </Link>
+                <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Sitemap </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link className="text-gray-700 transition hover:text-gray-700/75" href="/">
                   Upcoming Events
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
           <div className="text-center sm:text-left">
-            <p className="text-lg font-medium text-gray-900">Helpful Links</p>
+            <p className="text-lg font-medium text-gray-900">Location</p>
 
             <ul className="mt-8 space-y-4 text-sm">
-              <li>
+              {/* <li>
                 <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> FAQs </Link>
               </li>
 
               <li>
                 <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Support </Link>
-              </li>
+              </li> */}
 
               {/* <li>
                 <Link
@@ -166,7 +166,7 @@ const Footer = () => {
 
               <div className='pt-6 flex justify-center items-center'>
                 <Image src={"/returnAt.svg"} width={65} height={65} alt='original' />
-                <p className='px-4 text-gray-500'><b className='text-black font-medium'> Return within 7days </b> of receiving your order</p>
+                <p className='px-4 text-gray-500'><b className='text-black font-medium'> Return within 7days </b> of receiving your order <br /> <b className='text-black'> Get Free Shipping On Every Order </b></p>
               </div>
               <div className='pt-6 flex justify-center items-center'>
                 <AiOutlineSafety className='w-[65px] h-[65px] text-[#676b79]' />
