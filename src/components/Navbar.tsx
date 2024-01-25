@@ -8,10 +8,11 @@ import { ScrollArea } from './ui/scroll-area'
 import SliderCart from './cart/SliderCart'
 import { CiHeart, CiLocationOn } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
-import path from 'path'
-
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { auth } from 'your-firebase-config'; // replace with your Firebase configuration
 
 const Navbar = () => {
+    // const [user] = useAuthState(auth);
     const [state, setState] = useState(false)
     const navRef = useRef()
 
@@ -36,7 +37,18 @@ const Navbar = () => {
                     <CiLocationOn className="text-3xl font-semibold mb-2" />
                     <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
                 </Link>
-                
+
+                {/* <div className='md:flex justify-between font-bold'>
+                    {user ? (
+                        <p className="text-gray-600 px-4 mb-2">Welcome back! Get Free Shipping On Every Order.</p>
+                    ) : (
+                        <Link href={"/loginEmail"} className='text-gray-600 flex cursor-pointer items-center max-w-screen-xl mx-auto px-4'>
+                            <CiLocationOn className="text-3xl font-semibold mb-2" />
+                            <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
+                        </Link>
+                    )}
+                </div> */}
+
                 {/* <p className="text-gray-600  px-4 mb-2">Get Free Shipping On Every Order</p> */}
                 <div className="text-gray-600  px-4 mb-2">
                     <Link href={"/loginEmail"} className='uppercase'>Login</Link>
@@ -44,7 +56,7 @@ const Navbar = () => {
                     <Link href={"/signup"} className='uppercase'>Sign Up</Link>
 
                 </div>
-                
+
             </div>
 
             <nav className='bg-white w-full top-0 z-50 sticky'>
