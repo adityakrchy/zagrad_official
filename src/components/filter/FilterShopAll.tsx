@@ -297,7 +297,7 @@ export default function Example() {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
                 <ShopAll />
                 <ShopAll />
                 <ShopAll />
