@@ -125,6 +125,10 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     </div>
                                 </div>
                             </div>
+
+                            <div className='hidden md:block'>
+                                <Image src={'/three.svg'} width={550} height={40} alt='.' />
+                            </div>
                         </div>
                         <div className="md:flex-1 px-4">
                             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">{title}</h2>
@@ -184,6 +188,45 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     </button>
                                 </div>
                             </div>
+                            <div className="pb-4 product-information-container hidden md:block">
+                                <h3 className="font-semibold text-18 md:text-22 pb-4 text-#1A1E31">Key Highlights</h3>
+
+                                <div id="product-metafields-container" className="border-b-2 grid grid-cols-2 gap-x-24 lg:mt-34 product-metafields">
+
+                                    <div className="product-metafields-values text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Fit</h4>
+                                        <p className="text-#000000 pb-2 border-b-2 font-normal">Oversized</p>
+                                    </div>
+
+                                    <div className="product-metafields-values  text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Fabric</h4>
+                                        <p className="text-#000000 pb-2 border-b-2 font-normal">100% Cotton</p>
+                                    </div>
+
+                                    <div className="product-metafields-values pt-4 text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Sleeve Style</h4>
+                                        <p className="text-#000000 pb-2 border-b-2 font-normal">Regular Sleeve</p>
+                                    </div>
+
+                                    <div className="product-metafields-values pt-4 text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Length</h4>
+                                        <p className="text-#000000 pb-2 border-b-2 font-normal">Regular</p>
+                                    </div>
+
+                                    <div className="product-metafields-values pt-4 text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Pattern</h4>
+                                        <p className="text-#000000 pb-2 font-normal">Graphic Print</p>
+                                    </div>
+
+                                    <div className="product-metafields-values pt-4 text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Neck</h4>
+                                        <p className="text-#000000 pb-2 font-normal">Round Neck</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                             <div className='block md:hidden'>
                                 <div className="flex -mx-2 mb-4 md:flex">
                                     <div className="w-1/2 px-2">
@@ -192,6 +235,46 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     <div className="w-1/2 px-2">
                                         <Link href={"/cart"}><button className="w-full bg-gray-200  text-gray-800  py-2 px-4 rounded-full font-bold hover:bg-gray-300 ">Add to Cart</button></Link>
                                     </div>
+                                </div>
+                                <div className='block md:hidden pb-4'>
+                                    <Image src={'/three.svg'} width={550} height={40} alt='.' />
+                                </div>
+                            </div>
+                            <div className="pb-4 product-information-container block md:hidden">
+                                <h3 className="font-semibold text-18 md:text-22 pb-4 text-#1A1E31">Key Highlights</h3>
+
+                                <div id="product-metafields-container" className="border-b-2 grid grid-cols-2 gap-x-24 lg:mt-34 product-metafields">
+
+                                    <div className="product-metafields-values text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Fit</h4>
+                                        <p className="text-#000000 pb-2 border-b-2 font-normal">Oversized</p>
+                                    </div>
+
+                                    <div className="product-metafields-values  text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Fabric</h4>
+                                        <p className="text-#000000 pb-2 border-b-2 font-normal">100% Cotton</p>
+                                    </div>
+
+                                    <div className="product-metafields-values pt-4 text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Sleeve Style</h4>
+                                        <p className="text-#000000 pb-2 border-b-2 font-normal">Regular Sleeve</p>
+                                    </div>
+
+                                    <div className="product-metafields-values pt-4 text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Length</h4>
+                                        <p className="text-#000000 pb-2 border-b-2 font-normal">Regular</p>
+                                    </div>
+
+                                    <div className="product-metafields-values pt-4 text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Pattern</h4>
+                                        <p className="text-#000000 pb-2 font-normal">Graphic Print</p>
+                                    </div>
+
+                                    <div className="product-metafields-values pt-4 text-sm lg:text-base">
+                                        <h4 className="text-#666875 capitalize text-gray-600 pb-2">Neck</h4>
+                                        <p className="text-#000000 pb-2 font-normal">Round Neck</p>
+                                    </div>
+
                                 </div>
                             </div>
                             <Tabs defaultValue="productdescription" className="w-[400px]">

@@ -103,16 +103,21 @@ const Footer = () => {
           <div className="text-center sm:text-left">
             <p className="text-lg font-medium text-gray-900">Location</p>
 
-            <ul className="mt-8 space-y-4 text-sm">
-              {/* <li>
+            <div className="mt-8 space-y-4 text-sm text-gray-600">
+              <p>Eklingpura Chouraha, Ahmedabad Main Road <br />
+                (NH 8- Near Mahadev Hotel) Udaipur, India- 313002</p>
+            </div>
+
+            {/* <ul className="mt-8 space-y-4 text-sm">
+              <li>
                 <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> FAQs </Link>
               </li>
 
               <li>
                 <Link className="text-gray-700 transition hover:text-gray-700/75" href="/"> Support </Link>
-              </li> */}
+              </li>
 
-              {/* <li>
+              <li>
                 <Link
                   className="group flex justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                   href="/"
@@ -126,8 +131,8 @@ const Footer = () => {
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-500"></span>
                   </span>
                 </Link>
-              </li> */}
-            </ul>
+              </li>
+            </ul> */}
           </div>
 
           <div className="text-center sm:text-left md:col-span-4 lg:col-span-2">
