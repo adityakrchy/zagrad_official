@@ -2,6 +2,19 @@ import Link from "next/link";
 import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
+
+
 const Cart = () => {
   return (
     <>
@@ -477,7 +490,25 @@ const Cart = () => {
                   <label htmlFor="promo" className="font-semibold inline-block mb-3 text-sm uppercase">Promo Code</label>
                   <input type="text" id="promo" placeholder="Enter your code" className="p-2 text-sm w-full border" />
                 </div>
-                <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white mb-5 uppercase">Apply</button>
+                <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white mb-5 mr-2 uppercase">Apply</button>
+                <AlertDialog>
+  <AlertDialogTrigger className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white mb-5 uppercase">
+    My Coupon
+  </AlertDialogTrigger>
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle>BEST OFFERS FOR YOU</AlertDialogTitle>
+      <AlertDialogDescription>
+        Congratulations! You've unlocked a special coupon. Use code <span className="font-bold text-red-600">SPECIALOFFER123</span> during checkout to enjoy extra savings on your purchase. This is a limited-time promotion, so don't miss out!
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogCancel>Close</AlertDialogCancel>
+      <AlertDialogAction>Claim Coupon</AlertDialogAction>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>
+
                 <ul className="mb-5">
                   <div className="flex text-lg font-bold justify-between mb-2">
                     <span className="text-lg font-bold uppercase">Price Details {"3"}</span>

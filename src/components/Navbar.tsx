@@ -26,6 +26,7 @@ const Navbar = () => {
         { title: "Anime", path: "/anime" },
         { title: "Combos", path: "/combo" },
         { title: "Computer Geek", path: "/computergeek" },
+        { title: "Oversized", path: "/oversized" },
         // { title: "Wishlist", path: "/wishlist" },
 
     ]
