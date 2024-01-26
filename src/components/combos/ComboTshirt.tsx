@@ -30,7 +30,7 @@ const ComboTshirt = () => {
 
   return (
     <div className="pb-4">
-      <h2 className="text-2xl font-bold mb-4">Pick Size & Color</h2>
+      <h2 className="text-l font-bold mb-4">Pick Size & Color</h2>
       {tshirts.map((tshirt) => (
         <div
           key={tshirt.id}

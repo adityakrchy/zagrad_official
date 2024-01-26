@@ -40,7 +40,7 @@ const Combo = () => {
               setImageIndex(0);
           }}
       >
-          <Link href="/comboproductpage">
+          <Link href="/combo-product-page">
               <div className="relative rounded-md flex h-40 sm:h-60 overflow-hidden">
                   {isHovered && (
                       <>
