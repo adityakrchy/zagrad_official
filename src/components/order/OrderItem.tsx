@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const OrderItem = () => {
@@ -9,6 +10,11 @@ const OrderItem = () => {
             <span>Order ID: 34345454 </span>• Processing
           </p>
           <p className="text-gray-500">2023-23-12 </p>
+        </div>
+        <div>
+          <Link href={"#"} className="hover:underline">
+            Invoice
+          </Link>
         </div>
       </header>
       <div className="grid md:grid-cols-3 gap-2">
