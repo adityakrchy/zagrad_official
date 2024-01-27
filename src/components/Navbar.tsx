@@ -32,34 +32,33 @@ const Navbar = () => {
     ]
 
     return (
+            // <div className='flex justify-between pt-2 font-bold'>
+            //     <Link href="/trackorder" className="text-gray-600  flex cursor-pointer items-center px-4">
+            //         <CiLocationOn className="text-3xl font-semibold mb-2" />
+            //         <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
+            //     </Link>
+
+            //     {/* <div className='md:flex justify-between font-bold'>
+            //         {user ? (
+            //             <p className="text-gray-600 px-4 mb-2">Welcome back! Get Free Shipping On Every Order.</p>
+            //         ) : (
+            //             <Link href={"/loginEmail"} className='text-gray-600 flex cursor-pointer items-center max-w-screen-xl mx-auto px-4'>
+            //                 <CiLocationOn className="text-3xl font-semibold mb-2" />
+            //                 <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
+            //             </Link>
+            //         )}
+            //     </div> */}
+
+            //     {/* <p className="text-gray-600  px-4 mb-2">Get Free Shipping On Every Order</p> */}
+            //     <div className="text-gray-600  px-4 mb-2">
+            //         <Link href={"/loginEmail"} className='uppercase'>Login</Link>
+            //         <span className='px-2'>|</span>
+            //         <Link href={"/signup"} className='uppercase'>Sign Up</Link>
+
+            //     </div>
+
+            // </div>
         <>
-            <div className='flex justify-between pt-2 font-bold'>
-                <Link href="/trackorder" className="text-gray-600  flex cursor-pointer items-center px-4">
-                    <CiLocationOn className="text-3xl font-semibold mb-2" />
-                    <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
-                </Link>
-
-                {/* <div className='md:flex justify-between font-bold'>
-                    {user ? (
-                        <p className="text-gray-600 px-4 mb-2">Welcome back! Get Free Shipping On Every Order.</p>
-                    ) : (
-                        <Link href={"/loginEmail"} className='text-gray-600 flex cursor-pointer items-center max-w-screen-xl mx-auto px-4'>
-                            <CiLocationOn className="text-3xl font-semibold mb-2" />
-                            <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
-                        </Link>
-                    )}
-                </div> */}
-
-                {/* <p className="text-gray-600  px-4 mb-2">Get Free Shipping On Every Order</p> */}
-                <div className="text-gray-600  px-4 mb-2">
-                    <Link href={"/loginEmail"} className='uppercase'>Login</Link>
-                    <span className='px-2'>|</span>
-                    <Link href={"/signup"} className='uppercase'>Sign Up</Link>
-
-                </div>
-
-            </div>
-
             <nav className='bg-white w-full top-0 z-50 sticky'>
                 <div className='items-center px-4 mx-auto md:px-8 flex'>
 

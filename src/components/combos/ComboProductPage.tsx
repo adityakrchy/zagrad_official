@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/table"
 import { AiOutlineSafety } from 'react-icons/ai'
 import ComboTshirt from './ComboTshirt'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTrigger } from '../ui/dialog'
 
 type ProductPageProps = {
     title: String,
@@ -151,8 +152,59 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                 </div>
                             </div>
                             <div className="pb-4 product-information-container hidden md:block">
-                                <h3 className="font-semibold text-18 md:text-22 pb-4 text-#1A1E31">Key Highlights</h3>
+                                <div className='flex justify-between'>
 
+                                    <h3 className="font-semibold text-18 md:text-22 pb-4 text-#1A1E31">Key Highlights</h3>
+                                    <Dialog>
+                                        <DialogTrigger className='font-bold text-black hover:underline'>Size Guide</DialogTrigger>
+                                        <DialogContent>
+                                            <DialogHeader>
+                                                <DialogDescription>
+                                                    <Table>
+                                                        <TableCaption>Size and Measurement Chart</TableCaption>
+                                                        <TableHeader>
+                                                            <TableRow>
+                                                                <TableHead className="w-[100px]">Size</TableHead>
+                                                                <TableHead>Chest (in)</TableHead>
+                                                                <TableHead>Front Length (in)</TableHead>
+                                                                <TableHead >Across Shoulder (in)</TableHead>
+                                                            </TableRow>
+                                                        </TableHeader>
+                                                        <TableBody>
+                                                            <TableRow>
+                                                                <TableCell className="font-medium">S</TableCell>
+                                                                <TableCell>40.5</TableCell>
+                                                                <TableCell>28.0</TableCell>
+                                                                <TableCell>19.3</TableCell>
+                                                            </TableRow>
+                                                            <TableRow>
+                                                                <TableCell className="font-medium">M</TableCell>
+                                                                <TableCell>40.5</TableCell>
+                                                                <TableCell>28.0</TableCell>
+                                                                <TableCell>19.3</TableCell>
+                                                            </TableRow>
+                                                            <TableRow>
+                                                                <TableCell className="font-medium">L</TableCell>
+                                                                <TableCell>40.5</TableCell>
+                                                                <TableCell>28.0</TableCell>
+                                                                <TableCell>19.3</TableCell>
+                                                            </TableRow>
+                                                            <TableRow>
+                                                                <TableCell className="font-medium">XL</TableCell>
+                                                                <TableCell>40.5</TableCell>
+                                                                <TableCell>28.0</TableCell>
+                                                                <TableCell>19.3</TableCell>
+                                                            </TableRow>
+                                                        </TableBody>
+                                                    </Table>
+
+                                                </DialogDescription>
+                                            </DialogHeader>
+                                        </DialogContent>
+                                    </Dialog>
+
+
+                                </div>
                                 <div id="product-metafields-container" className="border-b-2 grid grid-cols-2 gap-x-24 lg:mt-34 product-metafields">
 
                                     <div className="product-metafields-values text-sm lg:text-base">
@@ -203,8 +255,59 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                 </div>
                             </div>
                             <div className="pb-4 product-information-container block md:hidden">
-                                <h3 className="font-semibold text-18 md:text-22 pb-4 text-#1A1E31">Key Highlights</h3>
+                                <div className='flex justify-between'>
 
+                                    <h3 className="font-semibold text-18 md:text-22 pb-4 text-#1A1E31">Key Highlights</h3>
+                                    <Dialog>
+                                        <DialogTrigger className='font-bold text-black hover:underline'>Size Guide</DialogTrigger>
+                                        <DialogContent>
+                                            <DialogHeader>
+                                                <DialogDescription>
+                                                    <Table>
+                                                        <TableCaption>Size and Measurement Chart</TableCaption>
+                                                        <TableHeader>
+                                                            <TableRow>
+                                                                <TableHead className="w-[100px]">Size</TableHead>
+                                                                <TableHead>Chest (in)</TableHead>
+                                                                <TableHead>Front Length (in)</TableHead>
+                                                                <TableHead >Across Shoulder (in)</TableHead>
+                                                            </TableRow>
+                                                        </TableHeader>
+                                                        <TableBody>
+                                                            <TableRow>
+                                                                <TableCell className="font-medium">S</TableCell>
+                                                                <TableCell>40.5</TableCell>
+                                                                <TableCell>28.0</TableCell>
+                                                                <TableCell>19.3</TableCell>
+                                                            </TableRow>
+                                                            <TableRow>
+                                                                <TableCell className="font-medium">M</TableCell>
+                                                                <TableCell>40.5</TableCell>
+                                                                <TableCell>28.0</TableCell>
+                                                                <TableCell>19.3</TableCell>
+                                                            </TableRow>
+                                                            <TableRow>
+                                                                <TableCell className="font-medium">L</TableCell>
+                                                                <TableCell>40.5</TableCell>
+                                                                <TableCell>28.0</TableCell>
+                                                                <TableCell>19.3</TableCell>
+                                                            </TableRow>
+                                                            <TableRow>
+                                                                <TableCell className="font-medium">XL</TableCell>
+                                                                <TableCell>40.5</TableCell>
+                                                                <TableCell>28.0</TableCell>
+                                                                <TableCell>19.3</TableCell>
+                                                            </TableRow>
+                                                        </TableBody>
+                                                    </Table>
+
+                                                </DialogDescription>
+                                            </DialogHeader>
+                                        </DialogContent>
+                                    </Dialog>
+
+
+                                </div>
                                 <div id="product-metafields-container" className="border-b-2 grid grid-cols-2 gap-x-24 lg:mt-34 product-metafields">
 
                                     <div className="product-metafields-values text-sm lg:text-base">
@@ -239,7 +342,7 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
 
                                 </div>
                             </div>
-                            <Tabs defaultValue="productdescription" className="w-[400px]">
+                            <Tabs defaultValue="productdescription" className="w-[294px] lg:w-[400px]">
                                 <TabsList>
                                     <TabsTrigger value="productdescription">Product Description</TabsTrigger>
                                     <TabsTrigger value="secureshopping">Secure Shopping</TabsTrigger>
@@ -259,7 +362,7 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     </div>
                                     Shop with confidence! Our secure shopping ensures your personal and financial information is protected with top-notch encryption technology. Your privacy and security are our priorities throughout the entire transaction process. Enjoy worry-free shopping online.</TabsContent>
                                 <TabsContent value="delivery" className='text-gray-500'>
-                                    <div className='pt-6 flex items-center'>
+                                    <div className='flex items-center'>
                                         <Image src={"/returnAt.svg"} width={65} height={65} alt='original' />
                                         <p className='px-4 text-gray-500'><b className='text-black font-medium'> Return within 7days </b> of receiving your order</p>
                                     </div>
@@ -277,7 +380,7 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     sagittis mauris blandit. Morbi fermentum libero vel nisl suscipit, nec tincidunt mi consectetur.
                                 </p>
                             </div> */}
-                            <Accordion type="single" collapsible>
+                            {/* <Accordion type="single" collapsible>
                                 <AccordionItem value="item-1">
                                     <AccordionTrigger>Size Guide</AccordionTrigger>
                                     <AccordionContent>
@@ -321,7 +424,7 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
 
                                     </AccordionContent>
                                 </AccordionItem>
-                            </Accordion>
+                            </Accordion> */}
 
                         </div>
                     </div>
