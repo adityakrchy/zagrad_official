@@ -4,6 +4,8 @@ import { useRef, useState } from 'react'
 import Link from 'next/link'
 import { CiHeart } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
+import { useSession, signIn, signOut } from "next-auth/react";
+
 
 import {
     DropdownMenu,
@@ -108,9 +110,10 @@ const women: { title: string; href: string; }[] = [
 const Navbar = () => {
 
     const [state, setState] = useState(false)
-    const navRef = useRef()
 
     const [quantity, setQuantity] = useState<number>(1);
+    const { data: session, status } = useSession();
+
 
 
     // Replace javascript:void(0) path with your path
@@ -215,22 +218,21 @@ const Navbar = () => {
                         <ul className="md:flex flex-col-reverse items-center gap-2 justify-center hidden space-x-0 lg:flex-row">
 
                             <DropdownMenu>
-                                {isAuthenticated ? (
+                                {status === "authenticated" ? (
                                     <DropdownMenuTrigger className="flex flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none">
-                                        <CgProfile className='cursor-pointer h-6 w-6' />Profiless
+                                        <CgProfile className='cursor-pointer h-6 w-6' />Profile
                                     </DropdownMenuTrigger>
                                 ) : (
                                     <Link href={"/login"}><div className='flex flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none'>
-                                        <CgProfile className='cursor-pointer h-6 w-6' />Profiless
+                                        <CgProfile className='cursor-pointer h-6 w-6' />Profile
                                     </div></Link>
                                 )}
                                 <DropdownMenuContent>
-                                    <DropdownMenuLabel>My Profile</DropdownMenuLabel>
+                                    <DropdownMenuLabel>{session?.user?.email}</DropdownMenuLabel>
                                     <DropdownMenuSeparator />
-                                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                                    <DropdownMenuItem>Billing</DropdownMenuItem>
-                                    <DropdownMenuItem>Team</DropdownMenuItem>
-                                    <DropdownMenuItem>Subscription</DropdownMenuItem>
+                                    <DropdownMenuItem><Link href={"/profile"}>Profile</Link></DropdownMenuItem>
+                                    <DropdownMenuItem>Orders</DropdownMenuItem>
+                                    <DropdownMenuItem className='text-red-500 cursor-pointer' onClick={()=>{signOut()}}>Logout</DropdownMenuItem>
                                 </DropdownMenuContent>
                             </DropdownMenu>
                             <li className="mt-4 lg:mt-0 flex justify-center items-center relative">

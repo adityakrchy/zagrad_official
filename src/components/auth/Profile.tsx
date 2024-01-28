@@ -4,9 +4,13 @@ import UserAddresses from "../user/UserAddresses";
 import Sidebar from "../layout/Sidebar";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+// import { useSession, signOut } from "next-auth/react";
+import { getServerSession } from "next-auth";
+import { Options } from "@/app/api/auth/[...nextauth]/route";
+const Profile = async () => {
+  const session = await getServerSession(Options);
 
-const Profile = () => {
-  
+
   return (
     <>
       <section className="py-10">
@@ -29,12 +33,12 @@ const Profile = () => {
                   </Avatar>
                 </div>
                 <figcaption>
-                  <h5 className="font-semibold text-lg">Ghulam</h5>
+                  <h5 className="font-semibold text-lg">{session?.user?.name}</h5>
                   <p>
                     <b>Phone:</b> +91-9999999999
                   </p>
                   <p>
-                    <b>Email:</b> ghulam@gmail.com | <b>Joined On:</b>
+                    <b>Email:</b> {session?.user?.email} | <b>Joined On:</b>
                     2023-12-24
                   </p>
                 </figcaption>
