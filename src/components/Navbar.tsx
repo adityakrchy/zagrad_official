@@ -20,44 +20,90 @@ const Navbar = () => {
 
     // Replace javascript:void(0) path with your path
     const navigation = [
-
-        { title: "Women", path: "/women" },
-        { title: "Men", path: "/men" },
-        { title: "Anime", path: "/anime" },
-        { title: "Combos", path: "/combo" },
-        { title: "Computer Geek", path: "/computergeek" },
-        { title: "Oversized", path: "/oversized" },
+        {
+            title: "Women", path: "/women",
+            dropdown: [
+                { title: "Printed T-Shirt", path: "/men/printed" },
+                { title: "BoyFriend T-Shirt", path: "/men/boyfriend" },
+                { title: "OverSized T-Shirt", path: "/men/boyfriend" },
+                { title: "Classic Fit T-Shirt", path: "/men/boyfriend" },
+                { title: "Full Sleeve T-Shirt", path: "/men/boyfriend" },
+                { title: "Plain T-Shirt", path: "/men/boyfriend" },
+                { title: "Half Sleeve T-Shirt", path: "/men/boyfriend" },
+                { title: "T-Shirt Combos", path: "/men/boyfriend" },
+                { title: "All T-Shirt", path: "/men/boyfriend" },
+                // Add more sub-items as needed
+            ],
+        },
+        {
+            title: "Men",
+            path: "/men",
+            dropdown: [
+                { title: "Printed T-Shirt", path: "/men/printed" },
+                { title: "Polo T-Shirt", path: "/men/boyfriend" },
+                { title: "OverSized T-Shirt", path: "/men/boyfriend" },
+                { title: "Classic Fit T-Shirt", path: "/men/boyfriend" },
+                { title: "Full Sleeve T-Shirt", path: "/men/boyfriend" },
+                { title: "Plain T-Shirt", path: "/men/boyfriend" },
+                { title: "Half Sleeve T-Shirt", path: "/men/boyfriend" },
+                { title: "T-Shirt Combos", path: "/men/boyfriend" },
+                { title: "All T-Shirt", path: "/men/boyfriend" },
+                // Add more sub-items as needed
+            ],
+        },
+        {
+            title: "Anime", path: "/anime"
+        },
+        // {
+        //     title: "Combos", path: "/combo",
+        //     dropdown: [
+        //         { title: "Casual", path: "/men/casual" },
+        //         { title: "Formal", path: "/men/formal" },
+        //         // Add more sub-items as needed
+        //     ],
+        // },
+        {
+            title: "Computer Geek", path: "/computergeek",
+        },
+        // {
+        //     title: "Oversized", path: "/oversized",
+        //     dropdown: [
+        //         { title: "Casual", path: "/men/casual" },
+        //         { title: "Formal", path: "/men/formal" },
+        //         // Add more sub-items as needed
+        //     ],
+        // },
         // { title: "Wishlist", path: "/wishlist" },
+    ];
 
-    ]
 
     return (
-            // <div className='flex justify-between pt-2 font-bold'>
-            //     <Link href="/trackorder" className="text-gray-600  flex cursor-pointer items-center px-4">
-            //         <CiLocationOn className="text-3xl font-semibold mb-2" />
-            //         <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
-            //     </Link>
+        // <div className='flex justify-between pt-2 font-bold'>
+        //     <Link href="/trackorder" className="text-gray-600  flex cursor-pointer items-center px-4">
+        //         <CiLocationOn className="text-3xl font-semibold mb-2" />
+        //         <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
+        //     </Link>
 
-            //     {/* <div className='md:flex justify-between font-bold'>
-            //         {user ? (
-            //             <p className="text-gray-600 px-4 mb-2">Welcome back! Get Free Shipping On Every Order.</p>
-            //         ) : (
-            //             <Link href={"/loginEmail"} className='text-gray-600 flex cursor-pointer items-center max-w-screen-xl mx-auto px-4'>
-            //                 <CiLocationOn className="text-3xl font-semibold mb-2" />
-            //                 <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
-            //             </Link>
-            //         )}
-            //     </div> */}
+        //     {/* <div className='md:flex justify-between font-bold'>
+        //         {user ? (
+        //             <p className="text-gray-600 px-4 mb-2">Welcome back! Get Free Shipping On Every Order.</p>
+        //         ) : (
+        //             <Link href={"/loginEmail"} className='text-gray-600 flex cursor-pointer items-center max-w-screen-xl mx-auto px-4'>
+        //                 <CiLocationOn className="text-3xl font-semibold mb-2" />
+        //                 <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
+        //             </Link>
+        //         )}
+        //     </div> */}
 
-            //     {/* <p className="text-gray-600  px-4 mb-2">Get Free Shipping On Every Order</p> */}
-            //     <div className="text-gray-600  px-4 mb-2">
-            //         <Link href={"/loginEmail"} className='uppercase'>Login</Link>
-            //         <span className='px-2'>|</span>
-            //         <Link href={"/signup"} className='uppercase'>Sign Up</Link>
+        //     {/* <p className="text-gray-600  px-4 mb-2">Get Free Shipping On Every Order</p> */}
+        //     <div className="text-gray-600  px-4 mb-2">
+        //         <Link href={"/loginEmail"} className='uppercase'>Login</Link>
+        //         <span className='px-2'>|</span>
+        //         <Link href={"/signup"} className='uppercase'>Sign Up</Link>
 
-            //     </div>
+        //     </div>
 
-            // </div>
+        // </div>
         <>
             <nav className='bg-white w-full top-0 z-50 sticky'>
                 <div className='items-center px-4 mx-auto md:px-8 flex'>
@@ -163,21 +209,38 @@ const Navbar = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="">
-                            <ul className="justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
-                                {
-                                    navigation.map((item, idx) => {
-                                        return (
-                                            <li key={idx} className="text-gray-600 font-semibold hover:text-indigo-600">
-                                                <Link href={item.path}>
-                                                    {item.title}
-                                                </Link>
-                                            </li>
-                                        )
-                                    })
-                                }
+                        <div className="relative">
+                            <ul className="flex justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
+                                {navigation.map((item, idx) => (
+                                    <li
+                                        key={idx}
+                                        className="group text-gray-600 font-semibold relative transition-all duration-300"
+                                    >
+                                        <Link href={item.path} className="relative z-10 pb-3">
+                                            {item.title}
+                                        </Link>
+
+                                        {/* Dropdown content */}
+                                        {item.dropdown && (
+                                            <ul className="hidden absolute left-0 mt-2 space-y-2 bg-white shadow-md group-hover:block w-52 rounded-md overflow-hidden">
+                                                {item.dropdown.map((subItem, subIdx) => (
+                                                    <li
+                                                        key={subIdx}
+                                                        className="px-4 py-2 transition-all duration-300 hover:bg-indigo-100"
+                                                    >
+                                                        <Link href={subItem.path} className="block">
+                                                            {subItem.title}
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
+
+
 
                     </div>
 
