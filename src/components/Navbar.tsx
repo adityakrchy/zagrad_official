@@ -1,13 +1,110 @@
 "use client"
 import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
-import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet'
+import { useRef, useState } from 'react'
 import Link from 'next/link'
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from './ui/select'
-import { ScrollArea } from './ui/scroll-area'
-import SliderCart from './cart/SliderCart'
-import { CiHeart, CiLocationOn } from "react-icons/ci";
+import { CiHeart } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
+
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
+
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+import { cn } from '@/lib/utils';
+import React from 'react';
+
+
+const men: { title: string; href: string; }[] = [
+    {
+        title: "Printed T-Shirt",
+        href: "/docs/primitives/alert-dialog",
+    },
+    {
+        title: "Polo T-Shirt",
+        href: "/docs/primitives/hover-card",
+    },
+    {
+        title: "OverSized T-Shirt",
+        href: "/docs/primitives/progress",
+    },
+    {
+        title: "Classic Fit T-Shirt",
+        href: "/docs/primitives/scroll-area",
+    },
+    {
+        title: "Full Sleeve T-Shirt",
+        href: "/docs/primitives/tabs",
+    },
+    {
+        title: "Plain T-Shirt",
+        href: "/docs/primitives/tooltip",
+    },
+    {
+        title: "Half Sleeve T-Shirt",
+        href: "/docs/primitives/tooltip",
+    },
+    {
+        title: "T-Shirt Combos",
+        href: "/docs/primitives/tooltip",
+    },
+    {
+        title: "All T-Shirt",
+        href: "/docs/primitives/tooltip",
+    },
+]
+const women: { title: string; href: string; }[] = [
+    {
+        title: "Printed T-Shirt",
+        href: "/docs/primitives/alert-dialog",
+    },
+    {
+        title: "BoyFriend T-Shirt",
+        href: "/docs/primitives/hover-card",
+    },
+    {
+        title: "OverSized T-Shirt",
+        href: "/docs/primitives/progress",
+    },
+    {
+        title: "Classic Fit T-Shirt",
+        href: "/docs/primitives/scroll-area",
+    },
+    {
+        title: "Full Sleeve T-Shirt",
+        href: "/docs/primitives/tabs",
+    },
+    {
+        title: "Plain T-Shirt",
+        href: "/docs/primitives/tooltip",
+    },
+    {
+        title: "Half Sleeve T-Shirt",
+        href: "/docs/primitives/tooltip",
+    },
+    {
+        title: "T-Shirt Combos",
+        href: "/docs/primitives/tooltip",
+    },
+    {
+        title: "All T-Shirt",
+        href: "/docs/primitives/tooltip",
+    },
+]
+
 // import { useAuthState } from 'react-firebase-hooks/auth';
 // import { auth } from 'your-firebase-config'; // replace with your Firebase configuration
 
@@ -20,44 +117,91 @@ const Navbar = () => {
 
     // Replace javascript:void(0) path with your path
     const navigation = [
+        // {
+        //     title: "Women", path: "/women",
+        //     dropdown: [
+        //         { title: "Printed T-Shirt", path: "/men/printed" },
+        //         { title: "BoyFriend T-Shirt", path: "/men/boyfriend" },
+        //         { title: "OverSized T-Shirt", path: "/men/boyfriend" },
+        //         { title: "Classic Fit T-Shirt", path: "/men/boyfriend" },
+        //         { title: "Full Sleeve T-Shirt", path: "/men/boyfriend" },
+        //         { title: "Plain T-Shirt", path: "/men/boyfriend" },
+        //         { title: "Half Sleeve T-Shirt", path: "/men/boyfriend" },
+        //         { title: "T-Shirt Combos", path: "/men/boyfriend" },
+        //         { title: "All T-Shirt", path: "/men/boyfriend" },
+        //         // Add more sub-items as needed
+        //     ],
+        // },
+        // {
+        //     title: "Men",
+        //     path: "/men",
+        //     dropdown: [
+        //         { title: "Printed T-Shirt", path: "/men/printed" },
+        //         { title: "Polo T-Shirt", path: "/men/boyfriend" },
+        //         { title: "OverSized T-Shirt", path: "/men/boyfriend" },
+        //         { title: "Classic Fit T-Shirt", path: "/men/boyfriend" },
+        //         { title: "Full Sleeve T-Shirt", path: "/men/boyfriend" },
+        //         { title: "Plain T-Shirt", path: "/men/boyfriend" },
+        //         { title: "Half Sleeve T-Shirt", path: "/men/boyfriend" },
+        //         { title: "T-Shirt Combos", path: "/men/boyfriend" },
+        //         { title: "All T-Shirt", path: "/men/boyfriend" },
+        //         // Add more sub-items as needed
+        //     ],
+        // },
+        {
+            title: "Anime", path: "/anime"
+        },
+        // {
+        //     title: "Combos", path: "/combo",
+        //     dropdown: [
+        //         { title: "Casual", path: "/men/casual" },
+        //         { title: "Formal", path: "/men/formal" },
+        //         // Add more sub-items as needed
+        //     ],
+        // },
+        {
+            title: "Computer Geek", path: "/computergeek",
 
-        { title: "Women", path: "/women" },
-        { title: "Men", path: "/men" },
-        { title: "Anime", path: "/anime" },
-        { title: "Combos", path: "/combo" },
-        { title: "Computer Geek", path: "/computergeek" },
-        { title: "Oversized", path: "/oversized" },
+        },
+        // {
+        //     title: "Oversized", path: "/oversized",
+        //     dropdown: [
+        //         { title: "Casual", path: "/men/casual" },
+        //         { title: "Formal", path: "/men/formal" },
+        //         // Add more sub-items as needed
+        //     ],
+        // },
         // { title: "Wishlist", path: "/wishlist" },
+    ];
 
-    ]
 
     return (
-            // <div className='flex justify-between pt-2 font-bold'>
-            //     <Link href="/trackorder" className="text-gray-600  flex cursor-pointer items-center px-4">
-            //         <CiLocationOn className="text-3xl font-semibold mb-2" />
-            //         <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
-            //     </Link>
+        // <div className='flex justify-between pt-2 font-bold'>
+        //     <Link href="/trackorder" className="text-gray-600  flex cursor-pointer items-center px-4">
+        //         <CiLocationOn className="text-3xl font-semibold mb-2" />
+        //         <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
+        //     </Link>
 
-            //     {/* <div className='md:flex justify-between font-bold'>
-            //         {user ? (
-            //             <p className="text-gray-600 px-4 mb-2">Welcome back! Get Free Shipping On Every Order.</p>
-            //         ) : (
-            //             <Link href={"/loginEmail"} className='text-gray-600 flex cursor-pointer items-center max-w-screen-xl mx-auto px-4'>
-            //                 <CiLocationOn className="text-3xl font-semibold mb-2" />
-            //                 <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
-            //             </Link>
-            //         )}
-            //     </div> */}
+        //     {/* <div className='md:flex justify-between font-bold'>
+        //         {user ? (
+        //             <p className="text-gray-600 px-4 mb-2">Welcome back! Get Free Shipping On Every Order.</p>
+        //         ) : (
+        //             <Link href={"/loginEmail"} className='text-gray-600 flex cursor-pointer items-center max-w-screen-xl mx-auto px-4'>
+        //                 <CiLocationOn className="text-3xl font-semibold mb-2" />
+        //                 <h2 className="text-sm font-semibold mb-2">TRACK YOUR ORDER</h2>
+        //             </Link>
+        //         )}
+        //     </div> */}
 
-            //     {/* <p className="text-gray-600  px-4 mb-2">Get Free Shipping On Every Order</p> */}
-            //     <div className="text-gray-600  px-4 mb-2">
-            //         <Link href={"/loginEmail"} className='uppercase'>Login</Link>
-            //         <span className='px-2'>|</span>
-            //         <Link href={"/signup"} className='uppercase'>Sign Up</Link>
+        //     {/* <p className="text-gray-600  px-4 mb-2">Get Free Shipping On Every Order</p> */}
+        //     <div className="text-gray-600  px-4 mb-2">
+        //         <Link href={"/loginEmail"} className='uppercase'>Login</Link>
+        //         <span className='px-2'>|</span>
+        //         <Link href={"/signup"} className='uppercase'>Sign Up</Link>
 
-            //     </div>
+        //     </div>
 
-            // </div>
+        // </div>
         <>
             <nav className='bg-white w-full top-0 z-50 sticky'>
                 <div className='items-center px-4 mx-auto md:px-8 flex'>
@@ -90,9 +234,37 @@ const Navbar = () => {
                                 <Image src="/zagrad_logo.png" width={35} height={35} alt="Brand Logo" />
                             </Link>
                         </div>
+                        <div className='flex flex-1 ml-4'>
+                        <form onSubmit={(e) => e.preventDefault()} className='flex-1 items-center justify-start pb-4 lg:flex lg:pb-0'>
+                            <div className="flex items-center gap-1 px-2 border rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                                <input
+                                    type="text"
+                                    placeholder="Search"
+                                    className="w-full px-2 py-2 text-gray-500 bg-transparent rounded-md outline-none"
+                                />
+                            </div>
+                        </form>
+                    </div>
+
                         <div className='flex items-center ml-auto'>
                             <ul className="flex justify-center items-center">
-                                <li className=" lg:ml-0">
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger className="flex flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none">
+                                        <CgProfile className='cursor-pointer h-6 w-6' />Profile
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent>
+                                        <DropdownMenuLabel>My Profile</DropdownMenuLabel>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuItem>Profile</DropdownMenuItem>
+                                        <DropdownMenuItem>Billing</DropdownMenuItem>
+                                        <DropdownMenuItem>Team</DropdownMenuItem>
+                                        <DropdownMenuItem>Subscription</DropdownMenuItem>
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+                                {/* <li className=" lg:ml-0">
                                     <Link
                                         href="/profile"
                                         className="flex flex-col justify-center items-center px-1 font-semibold text-center text-gray-600 hover:text-indigo-600 rounded-md "
@@ -100,7 +272,7 @@ const Navbar = () => {
                                         <CgProfile className='cursor-pointer h-6 w-6' />
                                         Profile
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li className=" lg:ml-0 relative">
                                     <Link
                                         href="/wishlist"
@@ -136,14 +308,30 @@ const Navbar = () => {
                                 })
                             } */}
 
-                                <li className="mt-4 lg:mt-0 flex justify-center items-center">
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger className="flex flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none">
+                                        <CgProfile className='cursor-pointer h-6 w-6' />Profile
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent>
+                                        <DropdownMenuLabel>My Profile</DropdownMenuLabel>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuItem>Profile</DropdownMenuItem>
+                                        <DropdownMenuItem>Billing</DropdownMenuItem>
+                                        <DropdownMenuItem>Team</DropdownMenuItem>
+                                        <DropdownMenuItem>Subscription</DropdownMenuItem>
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+
+
+
+                                {/* <li className="mt-4 lg:mt-0 flex justify-center items-center">
 
 
                                     <Link href="/profile" className="flex flex-col justify-center items-center px-1 font-semibold text-center text-gray-600 hover:text-indigo-600 rounded-md ">
                                         <CgProfile className='cursor-pointer h-6 w-6' />
                                         Profile
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li className="mt-4 lg:mt-0 flex justify-center items-center relative">
                                     <Link href={"/wishlist"} className="flex flex-col justify-center items-center px-1 font-semibold text-center text-gray-600 hover:text-indigo-600 rounded-md relative">
                                         <CiHeart className='h-6 w-6' />
@@ -163,22 +351,70 @@ const Navbar = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="">
-                            <ul className="justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
-                                {
-                                    navigation.map((item, idx) => {
-                                        return (
-                                            <li key={idx} className="text-gray-600 font-semibold hover:text-indigo-600">
-                                                <Link href={item.path}>
-                                                    {item.title}
-                                                </Link>
-                                            </li>
-                                        )
-                                    })
-                                }
-                            </ul>
-                        </div>
 
+                        <ul className="justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
+                            <NavigationMenu>
+                                <NavigationMenuList>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuTrigger className="text-gray-600 font-semibold">Men</NavigationMenuTrigger>
+                                        <NavigationMenuContent>
+                                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                                {men.map((men) => (
+                                                    <ListItem
+                                                        key={men.title}
+                                                        title={men.title}
+                                                        href={men.href}
+                                                    >
+                                                    </ListItem>
+                                                ))}
+                                            </ul>
+                                        </NavigationMenuContent>
+                                    </NavigationMenuItem>
+                                </NavigationMenuList>
+                                <NavigationMenuList>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuTrigger className="text-gray-600 font-semibold bg-none">Women</NavigationMenuTrigger>
+                                        <NavigationMenuContent>
+                                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                                {women.map((women) => (
+                                                    <ListItem
+                                                        key={women.title}
+                                                        title={women.title}
+                                                        href={women.href}
+                                                    >
+                                                    </ListItem>
+                                                ))}
+                                            </ul>
+                                        </NavigationMenuContent>
+                                    </NavigationMenuItem>
+                                    <NavigationMenuItem className="text-gray-600 font-semibold">
+                                        <Link href="/anime" legacyBehavior passHref>
+                                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                                Anime
+                                            </NavigationMenuLink>
+                                        </Link>
+                                    </NavigationMenuItem>
+                                    <NavigationMenuItem className="text-gray-600 font-semibold">
+                                        <Link href="/computergeek" legacyBehavior passHref>
+                                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                                Computer Geek
+                                            </NavigationMenuLink>
+                                        </Link>
+                                    </NavigationMenuItem>
+                                </NavigationMenuList>
+                            </NavigationMenu>
+                            {/* {
+                                navigation.map((item, idx) => {
+                                    return (
+                                        <li key={idx} className="text-gray-600 font-semibold">
+                                            <Link href={item.path}>
+                                                {item.title}
+                                            </Link>
+                                        </li>
+                                    )
+                                })
+                            } */}
+                        </ul>
                     </div>
 
                 </div>
@@ -200,5 +436,31 @@ const Navbar = () => {
         </>
     );
 };
+
+const ListItem = React.forwardRef<
+    React.ElementRef<"a">,
+    React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+    return (
+        <li>
+            <NavigationMenuLink asChild>
+                <a
+                    ref={ref}
+                    className={cn(
+                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        className
+                    )}
+                    {...props}
+                >
+                    <div className="text-sm font-medium leading-none">{title}</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        {children}
+                    </p>
+                </a>
+            </NavigationMenuLink>
+        </li>
+    )
+})
+ListItem.displayName = "ListItem"
 
 export default Navbar;
