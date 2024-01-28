@@ -123,6 +123,8 @@ const Navbar = () => {
         { title: "Contact", path: "/contact" },
     ]
 
+    const isAuthenticated = false
+
     return (
         <nav className="bg-white w-full top-0 z-20 sticky">
             <div className="items-center px-4  mx-auto md:px-8 lg:flex">
@@ -172,9 +174,13 @@ const Navbar = () => {
                         <div className='flex items-center ml-auto'>
                             <ul className="flex justify-center items-center">
                                 <DropdownMenu>
-                                    <DropdownMenuTrigger className="flex flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none">
-                                        <CgProfile className='cursor-pointer h-6 w-6' />Profile
-                                    </DropdownMenuTrigger>
+                                    {isAuthenticated ? (
+                                        <DropdownMenuTrigger className="flex flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none">
+                                            <CgProfile className='cursor-pointer h-6 w-6' />Profile
+                                        </DropdownMenuTrigger>
+                                    ) : (
+                                        <Link href={"/login"}><CgProfile className='cursor-pointer h-6 w-6' />Profile</Link>
+                                    )}
                                     <DropdownMenuContent>
                                         <DropdownMenuLabel>My Profile</DropdownMenuLabel>
                                         <DropdownMenuSeparator />
@@ -209,9 +215,15 @@ const Navbar = () => {
                         <ul className="md:flex flex-col-reverse items-center gap-2 justify-center hidden space-x-0 lg:flex-row">
 
                             <DropdownMenu>
-                                <DropdownMenuTrigger className="flex flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none">
-                                    <CgProfile className='cursor-pointer h-6 w-6' />Profile
-                                </DropdownMenuTrigger>
+                                {isAuthenticated ? (
+                                    <DropdownMenuTrigger className="flex flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none">
+                                        <CgProfile className='cursor-pointer h-6 w-6' />Profiless
+                                    </DropdownMenuTrigger>
+                                ) : (
+                                    <Link href={"/login"}><div className='flex flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none'>
+                                        <CgProfile className='cursor-pointer h-6 w-6' />Profiless
+                                    </div></Link>
+                                )}
                                 <DropdownMenuContent>
                                     <DropdownMenuLabel>My Profile</DropdownMenuLabel>
                                     <DropdownMenuSeparator />
@@ -240,58 +252,58 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                        <ul className="justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0 hidden md:block">
-                            <NavigationMenu>
-                                <NavigationMenuList>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuTrigger className="text-gray-600 font-semibold">Men</NavigationMenuTrigger>
-                                        <NavigationMenuContent>
-                                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                                {men.map((men) => (
-                                                    <ListItem
-                                                        key={men.title}
-                                                        title={men.title}
-                                                        href={men.href}
-                                                    >
-                                                    </ListItem>
-                                                ))}
-                                            </ul>
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
-                                </NavigationMenuList>
-                                <NavigationMenuList>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuTrigger className="text-gray-600 font-semibold">Women</NavigationMenuTrigger>
-                                        <NavigationMenuContent>
-                                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                                {women.map((women) => (
-                                                    <ListItem
-                                                        key={women.title}
-                                                        title={women.title}
-                                                        href={women.href}
-                                                    >
-                                                    </ListItem>
-                                                ))}
-                                            </ul>
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem className="text-gray-600 font-semibold">
-                                        <Link href="/anime" legacyBehavior passHref>
-                                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                                Anime
-                                            </NavigationMenuLink>
-                                        </Link>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem className="text-gray-600 font-semibold">
-                                        <Link href="/computergeek" legacyBehavior passHref>
-                                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                                Computer Geek
-                                            </NavigationMenuLink>
-                                        </Link>
-                                    </NavigationMenuItem>
-                                </NavigationMenuList>
-                            </NavigationMenu>
-                        </ul>
+                    <ul className="justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0 hidden md:block">
+                        <NavigationMenu>
+                            <NavigationMenuList>
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger className="text-gray-600 font-semibold">Men</NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                            {men.map((men) => (
+                                                <ListItem
+                                                    key={men.title}
+                                                    title={men.title}
+                                                    href={men.href}
+                                                >
+                                                </ListItem>
+                                            ))}
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                            </NavigationMenuList>
+                            <NavigationMenuList>
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger className="text-gray-600 font-semibold">Women</NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                            {women.map((women) => (
+                                                <ListItem
+                                                    key={women.title}
+                                                    title={women.title}
+                                                    href={women.href}
+                                                >
+                                                </ListItem>
+                                            ))}
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem className="text-gray-600 font-semibold">
+                                    <Link href="/anime" legacyBehavior passHref>
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                            Anime
+                                        </NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem className="text-gray-600 font-semibold">
+                                    <Link href="/computergeek" legacyBehavior passHref>
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                            Computer Geek
+                                        </NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+                            </NavigationMenuList>
+                        </NavigationMenu>
+                    </ul>
                     <div className="md:hidden">
                         <ul className="justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
                             {

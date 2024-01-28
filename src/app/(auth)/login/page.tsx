@@ -1,9 +1,9 @@
-import FilterShopAll from '@/components/filter/FilterShopAll'
 import React from 'react'
+import Login from "@/components/auth/Login"
 
 const page = () => {
   return (
-    <FilterShopAll />
+    <Login />
   )
 }
 
