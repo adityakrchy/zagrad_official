@@ -116,10 +116,10 @@ const Navbar = () => {
     // Replace javascript:void(0) path with your path
     const navigation = [
 
-        { title: "Women", path: "/women" },
         { title: "Men", path: "/men" },
-        { title: "Sale", path: "/sale" },
-        { title: "About", path: "/about" },
+        { title: "Women", path: "/women" },
+        { title: "Anime", path: "/anime" },
+        { title: "Comouter Geek", path: "/computergeek" },
         { title: "Contact", path: "/contact" },
     ]
 
@@ -261,7 +261,7 @@ const Navbar = () => {
                                 </NavigationMenuList>
                                 <NavigationMenuList>
                                     <NavigationMenuItem>
-                                        <NavigationMenuTrigger className="text-gray-600 font-semibold bg-none">Women</NavigationMenuTrigger>
+                                        <NavigationMenuTrigger className="text-gray-600 font-semibold">Women</NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                                                 {women.map((women) => (
@@ -297,7 +297,7 @@ const Navbar = () => {
                             {
                                 navigation.map((item, idx) => {
                                     return (
-                                        <li key={idx} className="text-gray-600 font-semibold hover:text-indigo-600">
+                                        <li key={idx} className="text-gray-600 font-semibold">
                                             <a href={item.path}>
                                                 {item.title}
                                             </a>
