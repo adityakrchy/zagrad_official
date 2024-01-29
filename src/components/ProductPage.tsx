@@ -312,7 +312,7 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                         <DialogTrigger className='font-bold text-black hover:underline'>Size Guide</DialogTrigger>
                                         <DialogContent>
                                             <DialogHeader>
-                                            <DialogDescription>
+                                                <DialogDescription>
                                                     <Table>
                                                         <TableCaption>Size and Measurement Chart</TableCaption>
                                                         <TableHeader>
@@ -393,7 +393,7 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
 
                                 </div>
                             </div>
-                            <Tabs defaultValue="productdescription" className="w-[400px]">
+                            <Tabs defaultValue="productdescription" className="w-[400px] hidden md:block">
                                 <TabsList>
                                     <TabsTrigger value="productdescription">Product Description</TabsTrigger>
                                     <TabsTrigger value="secureshopping">Secure Shopping</TabsTrigger>
@@ -420,6 +420,64 @@ const ProductPage = ({ title, description, price, availibility }: ProductPagePro
                                     Experience hassle-free delivery! We prioritize swift and reliable shipping to bring your order straight to your doorstep. Track your package in real-time and enjoy a seamless experience from purchase to receipt. Your satisfaction is our priority.</TabsContent>
                                 {/* <TabsContent value="size">Change your size here.</TabsContent> */}
                             </Tabs>
+                            <Accordion type="single" collapsible className='md:hidden'>
+                                <AccordionItem value="item-1">
+                                    <AccordionTrigger>Product Description</AccordionTrigger>
+                                    <AccordionContent>
+                                        <div className='py-2 flex justify-center items-center'>
+                                            <Image src={"/original.png"} width={70} height={70} alt='original' />
+                                            <p className='px-4 text-gray-500'>
+                                                <b className='text-black font-medium'> 100% ORIGINAL </b>
+                                                guarantee for all products at zagrad
+                                            </p>
+                                        </div>
+                                        <p>
+                                            Introducing our Urban Comfort Tee – the perfect blend of style and comfort.
+                                            Crafted from premium 100% cotton, this t-shirt offers a soft, breathable feel
+                                            for all-day wear. With a modern design, classic crew neck, and tailored fit,
+                                            it's a versatile wardrobe essential. Choose from a range of vibrant colors and
+                                            elevate your casual look effortlessly. Upgrade your comfort game with the Urban
+                                            Comfort Tee – where fashion meets relaxation.
+                                        </p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-2">
+                                    <AccordionTrigger>Secure Shopping</AccordionTrigger>
+                                    <AccordionContent>
+                                        <div className='flex items-center'>
+                                            <AiOutlineSafety className='w-[65px] h-[65px] text-[#676b79]' />
+                                            <p className='px-2 text-gray-500'>
+                                                <b className='text-black font-medium'> Secure & Safe Payment </b>
+                                            </p>
+                                        </div>
+                                        <p>
+                                            Shop with confidence! Our secure shopping ensures your personal and financial
+                                            information is protected with top-notch encryption technology. Your privacy and
+                                            security are our priorities throughout the entire transaction process. Enjoy
+                                            worry-free shopping online.
+                                        </p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-3">
+                                    <AccordionTrigger>Delivery</AccordionTrigger>
+                                    <AccordionContent>
+                                        <div className='flex items-center'>
+                                            <Image src={"/returnAt.svg"} width={65} height={65} alt='original' />
+                                            <p className='px-4 text-gray-500'>
+                                                <b className='text-black font-medium'> Return within 7 days </b>
+                                                of receiving your order
+                                            </p>
+                                        </div>
+                                        <p>
+                                            Experience hassle-free delivery! We prioritize swift and reliable shipping to bring
+                                            your order straight to your doorstep. Track your package in real-time and enjoy a
+                                            seamless experience from purchase to receipt. Your satisfaction is our priority.
+                                        </p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+
+
 
                             {/* <div>
                                 <span className="font-bold text-gray-700 dark:text-gray-300">Product Description:</span>

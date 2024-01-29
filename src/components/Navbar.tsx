@@ -174,15 +174,15 @@ const Navbar = () => {
                                 </div>
                             </form>
                         </div>
-                        <div className='flex items-center ml-auto'>
-                            <ul className="flex justify-center items-center">
+                        <div className=''>
+                            <ul className="flex justify-center items-center gap-1 font-semibold text-gray-600" >
                                 <DropdownMenu>
                                     {isAuthenticated ? (
-                                        <DropdownMenuTrigger className="flex flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none">
+                                        <DropdownMenuTrigger className="flex lg:ml-0 relative flex-col justify-center items-center px-1 font-semibold text-center border-none text-gray-600 hover:text-indigo-600 rounded-md focus:outline-none">
                                             <CgProfile className='cursor-pointer h-6 w-6' />Profile
                                         </DropdownMenuTrigger>
                                     ) : (
-                                        <Link href={"/login"}><CgProfile className='cursor-pointer h-6 w-6' />Profile</Link>
+                                        <Link href={"/login"} className='flex flex-col justify-center items-center'><CgProfile className='cursor-pointer h-6 w-6' />Profile</Link>
                                     )}
                                     <DropdownMenuContent>
                                         <DropdownMenuLabel>My Profile</DropdownMenuLabel>
@@ -196,7 +196,7 @@ const Navbar = () => {
                                 <li className=" lg:ml-0 relative">
                                     <Link
                                         href="/wishlist"
-                                        className="flex flex-col justify-center items-center px-1 font-semibold text-center text-gray-600 hover:text-indigo-600 rounded-md relative"
+                                        className="flex flex-col justify-center items-center px-1 text-center text-gray-600 hover:text-indigo-600 rounded-md relative"
                                     >
                                         <CiHeart className='h-6 w-6' />
                                         <span className="absolute top-0 right-[22px] h-2 w-2 bg-red-500 rounded-full"></span>
