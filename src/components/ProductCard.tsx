@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { FaStar } from "react-icons/fa";
 
+
 const ProductCard = () => {
     const [isHovered, setIsHovered] = useState(false);
     const [imageIndex, setImageIndex] = useState(0);
@@ -77,8 +78,8 @@ const ProductCard = () => {
                 </a>
                 <div className="mt-2 mb-5 flex items-center justify-between">
                     <p>
-                        <span className="text-3xl font-bold text-slate-900">Rs. 499</span>
-                        <span className="text-sm text-slate-900 line-through">Rs. 599</span>
+                        <span className="text-sm font-bold md:text-3xl md:font-bold text-green-900">₹.499</span>
+                        <span className="text-[10px] md:text-sm text-slate-900 line-through">₹.599</span>
                     </p>
                     <div className='flex justify-center items-center'>
                         <FaStar className='text-yellow-500' />
