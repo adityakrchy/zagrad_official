@@ -10,6 +10,9 @@ const HeroImageSlider = () => {
 
         <Carousel infiniteLoop={true} autoPlay={true} showThumbs={false}>
             <div>
+                <Image src="/banner/banner_vintage.jpg" width={1540} height={400} alt='' />
+            </div>
+            <div>
                 <Image src="/banner/img1.jpg" width={1540} height={400} alt='' />
             </div>
             <div>

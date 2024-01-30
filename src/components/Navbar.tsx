@@ -61,7 +61,7 @@ const men: { title: string; href: string; }[] = [
     },
     {
         title: "T-Shirt Combos",
-        href: "/docs/primitives/tooltip",
+        href: "/combo",
     },
     {
         title: "All T-Shirt",
@@ -99,7 +99,7 @@ const women: { title: string; href: string; }[] = [
     },
     {
         title: "T-Shirt Combos",
-        href: "/docs/primitives/tooltip",
+        href: "/combo",
     },
     {
         title: "All T-Shirt",
