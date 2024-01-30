@@ -77,7 +77,7 @@ const Shipping = () => {
                 </div>
 
                 <Link
-                  href="/newAddress"
+                  href="/profile/newAddress"
                   className="px-4 py-2 inline-block text-indigo-600 border border-gray-300 rounded-md hover:bg-gray-100"
                 >
                   <i className="mr-1 fa fa-plus"></i> Add new address
