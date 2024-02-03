@@ -119,8 +119,8 @@ const Navbar = () => {
     // Replace javascript:void(0) path with your path
     const navigation = [
 
-        { title: "Men", path: "/men" },
-        { title: "Women", path: "/women" },
+        { title: "Men", path: "/navMobileMen" },
+        { title: "Women", path: "/navMobileWomen" },
         { title: "Anime", path: "/anime" },
         { title: "Comouter Geek", path: "/computergeek" },
         { title: "Contact", path: "/contact" },
