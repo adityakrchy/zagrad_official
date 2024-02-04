@@ -181,7 +181,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-gray-100 pt-6 sm:flex sm:items-center sm:justify-between">
+        <div className="mt-16 border-t border-gray-100 pt-6 md:flex md:items-center md:justify-between">
           <p className="text-center text-sm text-gray-500 sm:text-left">
             Copyright &copy; 2024 Zagrad. All rights reserved.
           </p>

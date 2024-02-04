@@ -6,7 +6,7 @@ const NavBar = () => {
     return (
         <>
             <h1 className='text-xl text-center m-4 font-bold text-gray-900 sm:text-3xl uppercase'>Women's <br /> Category</h1>
-            <div className='grid grid-cols-2'>
+            <div className='grid grid-cols-2 sm:grid-cols-3'>
                 <div className=" max-w-sm m-2 rounded-t-[50%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <Link href="#" className='flex justify-center items-center'>
                         <Image className="" src="/MobileNav/NavMonile1.png" width={200} height={200} alt="product image" />
