@@ -19,6 +19,26 @@ const NavBar = () => {
                 </div>
                 <div className=" max-w-sm m-2 rounded-t-[50%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <Link href="#" className='flex justify-center items-center'>
+                        <Image className=" " width={200} height={200} src="/MobileNav/NavMonile1.png" alt="product image" />
+                    </Link>
+                    <div className="px-5 pb-5 flex justify-center items-center">
+                        <Link href="#">
+                            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Combos <br /> T-Shirt</h5>
+                        </Link>
+                    </div>
+                </div>
+                <div className=" max-w-sm m-2 rounded-t-[50%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <Link href="#" className='flex justify-center items-center'>
+                        <Image className="" width={200} height={200} src="/MobileNav/NavMonile1.png" alt="product image" />
+                    </Link>
+                    <div className="px-5 pb-5 flex justify-center items-center">
+                        <Link href="#">
+                            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Plain <br /> T-Shirt</h5>
+                        </Link>
+                    </div>
+                </div>
+                {/* <div className=" max-w-sm m-2 rounded-t-[50%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <Link href="#" className='flex justify-center items-center'>
                         <Image className="" width={200} height={200} src="/MobileNav/NavMonile1.png" alt="product image" />
                     </Link>
                     <div className="px-5 pb-5 flex justify-center items-center">
@@ -67,26 +87,8 @@ const NavBar = () => {
                         </Link>
                     </div>
                 </div>
-                <div className=" max-w-sm m-2 rounded-t-[50%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <Link href="#" className='flex justify-center items-center'>
-                        <Image className="" width={200} height={200} src="/MobileNav/NavMonile1.png" alt="product image" />
-                    </Link>
-                    <div className="px-5 pb-5 flex justify-center items-center">
-                        <Link href="#">
-                            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Plain <br /> T-Shirt</h5>
-                        </Link>
-                    </div>
-                </div>
-                <div className=" max-w-sm m-2 rounded-t-[50%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <Link href="#" className='flex justify-center items-center'>
-                        <Image className=" " width={200} height={200} src="/MobileNav/NavMonile1.png" alt="product image" />
-                    </Link>
-                    <div className="px-5 pb-5 flex justify-center items-center">
-                        <Link href="#">
-                            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Combos <br /> T-Shirt</h5>
-                        </Link>
-                    </div>
-                </div>
+                
+                
                 <div className=" max-w-sm m-2 rounded-t-[50%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <Link href="#" className='flex justify-center items-center'>
                         <Image className="" width={200} height={200} src="/MobileNav/NavMonile1.png" alt="product image" />
@@ -96,7 +98,7 @@ const NavBar = () => {
                             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">All <br /> T-Shirt</h5>
                         </Link>
                     </div>
-                </div>
+                </div> */}
                 
             </div>
 

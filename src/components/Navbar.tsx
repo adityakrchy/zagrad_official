@@ -33,78 +33,78 @@ import React from 'react';
 const men: { title: string; href: string; }[] = [
     {
         title: "Printed T-Shirt",
-        href: "/docs/primitives/alert-dialog",
-    },
-    {
-        title: "Polo T-Shirt",
-        href: "/docs/primitives/hover-card",
-    },
-    {
-        title: "OverSized T-Shirt",
-        href: "/docs/primitives/progress",
-    },
-    {
-        title: "Classic Fit T-Shirt",
-        href: "/docs/primitives/scroll-area",
-    },
-    {
-        title: "Full Sleeve T-Shirt",
-        href: "/docs/primitives/tabs",
+        href: "#",
     },
     {
         title: "Plain T-Shirt",
-        href: "/docs/primitives/tooltip",
+        href: "#",
     },
     {
-        title: "Half Sleeve T-Shirt",
-        href: "/docs/primitives/tooltip",
-    },
-    {
-        title: "T-Shirt Combos",
+        title: "Combos T-Shirt",
         href: "/combo",
     },
-    {
-        title: "All T-Shirt",
-        href: "/docs/primitives/tooltip",
-    },
+    // {
+    //     title: "Polo T-Shirt",
+    //     href: "#",
+    // },
+    // {
+    //     title: "OverSized T-Shirt",
+    //     href: "#",
+    // },
+    // {
+    //     title: "Classic Fit T-Shirt",
+    //     href: "#",
+    // },
+    // {
+    //     title: "Full Sleeve T-Shirt",
+    //     href: "#",
+    // },
+    // {
+    //     title: "Half Sleeve T-Shirt",
+    //     href: "#",
+    // },
+    // {
+    //     title: "All T-Shirt",
+    //     href: "#",
+    // },
 ]
 const women: { title: string; href: string; }[] = [
     {
         title: "Printed T-Shirt",
-        href: "/docs/primitives/alert-dialog",
-    },
-    {
-        title: "BoyFriend T-Shirt",
-        href: "/docs/primitives/hover-card",
-    },
-    {
-        title: "OverSized T-Shirt",
-        href: "/docs/primitives/progress",
-    },
-    {
-        title: "Classic Fit T-Shirt",
-        href: "/docs/primitives/scroll-area",
-    },
-    {
-        title: "Full Sleeve T-Shirt",
-        href: "/docs/primitives/tabs",
+        href: "#",
     },
     {
         title: "Plain T-Shirt",
-        href: "/docs/primitives/tooltip",
+        href: "#",
     },
     {
-        title: "Half Sleeve T-Shirt",
-        href: "/docs/primitives/tooltip",
-    },
-    {
-        title: "T-Shirt Combos",
+        title: "Combos T-Shirt",
         href: "/combo",
     },
-    {
-        title: "All T-Shirt",
-        href: "/docs/primitives/tooltip",
-    },
+    // {
+    //     title: "BoyFriend T-Shirt",
+    //     href: "#",
+    // },
+    // {
+    //     title: "OverSized T-Shirt",
+    //     href: "#",
+    // },
+    // {
+    //     title: "Classic Fit T-Shirt",
+    //     href: "#",
+    // },
+    // {
+    //     title: "Full Sleeve T-Shirt",
+    //     href: "#",
+    // },
+    // {
+    //     title: "Half Sleeve T-Shirt",
+    //     href: "#",
+    // },
+    // {
+    //     title: "All T-Shirt",
+    //     href: "#",
+    // },
 ]
 
 const Navbar = () => {
@@ -122,7 +122,7 @@ const Navbar = () => {
         { title: "Men", path: "/navMobileMen" },
         { title: "Women", path: "/navMobileWomen" },
         { title: "Anime", path: "/anime" },
-        { title: "Comouter Geek", path: "/computergeek" },
+        // { title: "Comouter Geek", path: "/computergeek" },
         { title: "Contact", path: "/contact" },
     ]
 
@@ -296,13 +296,13 @@ const Navbar = () => {
                                         </NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
-                                <NavigationMenuItem className="text-gray-600 font-semibold">
+                                {/* <NavigationMenuItem className="text-gray-600 font-semibold">
                                     <Link href="/computergeek" legacyBehavior passHref>
                                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                             Computer Geek
                                         </NavigationMenuLink>
                                     </Link>
-                                </NavigationMenuItem>
+                                </NavigationMenuItem> */}
                             </NavigationMenuList>
                         </NavigationMenu>
                     </ul>
